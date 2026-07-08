@@ -17,7 +17,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     label: 'Email Us',
-    value: 'anikedhyagroup@gmail.com',
+    value: 'anikedhyamarketing@gmail.com',
   },
 ];
 

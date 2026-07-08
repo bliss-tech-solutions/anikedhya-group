@@ -15,6 +15,7 @@ export const projects = [
     status: 'Ongoing',
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal Corporation/MAA16550/070326/311230',
     brochure: '/2026/05/Anikedhya-Emperors-E-Brouchure.pdf',
+    ctaImage :'/2x1.5in sticker ARTWORK CC_page-0001.jpg',
     description:
       'Anikedhya Emperors is a masterpiece of architectural grandeur a G+14 residential tower in the heart of Gota, Ahmedabad. Designed for those who believe their home should mirror the life they have built, it seamlessly blends neo-classical architecture with contemporary luxury.',
     highlights: [
@@ -74,23 +75,27 @@ export const projects = [
     description:
       'Anikedhya Atlantis offers contemporary 2 & 3 BHK appartment & shops.',
     highlights: [
-      'Full podium-level amenity deck',
+      "Efficiant 2 & 3 BHK Floor plans and Retail shopes",
       'Proximity to top schools and hospitals',
       'Vastu-compliant layouts',
     ],
     gallery: [
-      { src: '/Anikedhya Atlantis/Anikedhya Atlantis final_02_page-0004.jpg', label: 'Anikedhya Atlantis' },
-      { src: '/Anikedhya Atlantis/Anikedhya Atlantis final_02_page-0005.jpg', label: 'Anikedhya Atlantis' },
-      { src: '/Anikedhya Atlantis/Anikedhya Atlantis final_02_page-0007.jpg', label: 'Anikedhya Atlantis' },
+      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (2).jpeg', label: 'Anikedhya Atlantis' },
+      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (3).jpeg', label: 'Anikedhya Atlantis' },
+      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (4).jpeg', label: 'Anikedhya Atlantis' },
+      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (5).jpeg', label: 'Anikedhya Atlantis' },
+      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (6).jpeg', label: 'Anikedhya Atlantis' },
     ],
     amenities: [
       { icon: "FaDumbbell", name: "Gym" },
       { icon: "FaTableTennis", name: "Indoor Games" },
-      { icon: "FaParking", name: "Double Basement Parking" },
       { icon: "FaBolt", name: "DG Power Backup" },
       { icon: "MdOutlineChildCare", name: "Children's Play Area" },
-      { icon: "FaVideo", name: "CCTV Surveillance" },
-    ],
+      { icon: "FaVideo", name: "24×7 CCTV Surveillance" },
+      { icon: "FaTint", name: "24×7 Water Supply" },
+      { icon: "FaLeaf", name: "Landscaped Garden" },
+      { icon: "FaChair", name: "Senior Citizen Outdoor Seating" },
+    ]
   },
   {
     slug: 'anikedhya-capitol',
@@ -104,13 +109,7 @@ export const projects = [
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA02041/EX1/A1C/041120',
     brochure: '/capitol/capitol.pdf',
     description:
-      'Anikedhya Capitol elevates residential living with sky-high perspectives and premium specifications, offering residents a birds-eye view of the vibrant Bodakdev skyline.',
-    highlights: [
-      'Sky-facing residences with panoramic views',
-      'Premium kitchen fittings & fixtures',
-      'Club house with indoor games & lounge',
-      'Covered parking for all units',
-    ],
+      "Anikedhya Capitol is a landmark commercial development strategically located at Tapovan Circle, Ahmedabad. Designed to meet the needs of modern businesses, it offers premium office spaces and retail showrooms with contemporary architecture, excellent connectivity, and world-class infrastructure for enterprises and investors.",
     gallery: [
       { src: '/capitol/brochure_final_13AWK_1_compressed_page-0004.jpg', label: 'Anikedhya Capitol' },
       { src: '/capitol/brochure_final_13AWK_1_compressed_page-0005.jpg', label: 'Anikedhya Capitol' },
@@ -119,8 +118,6 @@ export const projects = [
     amenities: [
       "Easy Connectivity",
       "24×7 CCTV Surveillance",
-      "2 High-Speed Elevators",
-      "Ground & Basement Parking",
       "Fire Protection System",
       "24×7 Water Supply",
       "Common Toilet Facility",
@@ -164,8 +161,6 @@ export const projects = [
     amenities: [
       "Easy Connectivity",
       "24×7 CCTV Surveillance",
-      "2 High-Speed Elevators",
-      "Ground & Basement Parking",
       "Fire Protection System",
       "24×7 Water Supply",
       "Common Toilet Facility",
@@ -178,7 +173,7 @@ export const projects = [
   },
   {
     slug: 'anikedhya-alteza',
-    name: 'ANIKEDHYA ALTEZA',
+    name: 'Anikedhya Alteza',
     tagline: '2 & 3 Bhk Elite Living & Shops',
     location: 'Vavol, Gandhinagar',
     bg: 'pc-bg-2',
@@ -190,11 +185,12 @@ export const projects = [
     description:
       'Anikedhya Alteza stands as a testament to refined living in the premium Satellite neighbourhood of Ahmedabad. With spacious 4 BHK homes and curated lifestyle amenities, it delivers an uncompromised luxury experience.',
     highlights: [
-      'Spacious 4 BHK residences with private terraces',
-      'Premium Italian marble flooring throughout',
-      'Smart home automation pre-wiring',
-      'Dedicated parking for residents and visitors',
-      'Landscaped podium garden',
+      'Spacious 2 & 3 BHK residences with private terraces',
+      'Apartment and shopes',
+      'Well-planned apartment layouts',
+      'Landscaped courtyard and open spaces',
+      'Ample natural light and ventilation',
+      "Community-focused design",
     ],
     gallery: [
       { src: '/ANIKEDHYA ALTEZA/ANIKEDHYA ALTEZA_page-0007.jpg', label: 'ANIKEDHYA ALTEZA' },
@@ -205,6 +201,8 @@ export const projects = [
       { icon: "FaCompassDrafting", name: "Vastu-Compliant Layouts" },
       { icon: "FaSchool", name: "Top Schools & Hospitals Nearby" },
       { icon: "FaBuilding", name: "Efficient 2 & 3 BHK Apartments & Shops" },
+      "24×7 Water Supply",
+      "24x7 Security"
     ],
   },
 
@@ -221,7 +219,7 @@ export const projects = [
     heroImg: '/Siddharth Icon/WhatsApp Image 2026-07-07 at 2.13.16 PM.jpeg',
     status: 'Completed',
     legacy: true,
-    rera: 'N/A',
+    rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA01615/150218',
     brochure: '/Siddharth Icon/Siddharth Icon Brochure.pdf',
     description:
       'Siddharth Icon stands as a proud landmark in our journey of delivering thoughtfully designed residences. A perfect blend of comfort, functionality and community living for modern families.',
@@ -238,10 +236,10 @@ export const projects = [
       { src: '/Siddharth Icon/WhatsApp Image 2026-07-07 at 2.13.01 PM.jpeg', label: 'Siddharth Icon' },
     ],
     amenities: [
-      { icon: "FaLeaf", name: "Gardens" },
-      { icon: "FaShieldAlt", name: "24×7 Security" },
-      { icon: "FaParking", name: "Parking" },
-      { icon: "FaBolt", name: "Power Backup" },
+      "Security",
+      "Drinking Water",
+      "Water Conservation",
+      "Water Supply",
     ],
   },
   {
@@ -270,7 +268,6 @@ export const projects = [
     amenities: [
       { icon: "FaLeaf", name: "Gardens" },
       { icon: "FaShieldAlt", name: "24×7 Security" },
-      { icon: "FaParking", name: "Parking" },
       { icon: "MdOutlineChildCare", name: "Kids Play Area" },
     ],
   },
@@ -463,12 +460,12 @@ export const projects = [
     tagline: '2 & 3 BHK Apartments & Shops',
     location: 'Kalol, Gandhinagar',
     bg: 'pc-bg-2',
-    heroImg: '/logo.png',
+    heroImg: '/subh/shubhdevelopres0003.jpg.jpeg',
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '',
-    noDetail: true,
+    brochure: '/subh/shubhdevelopres.pdf',
+    // noDetail: true,
     description:
       'Sneh Greens offers the perfect harmony of urban convenience and green living. A residential haven surrounded by landscaped gardens and open spaces for a refreshing lifestyle.',
     highlights: [
@@ -478,7 +475,8 @@ export const projects = [
       'Recreational areas for families',
     ],
     gallery: [
-      { src: '/2026/04/sneh-greens.jpg', label: 'Building View' },
+      { src: '/subh/shubhdevelopres0003.jpg.jpeg', label: 'Building View' },
+      { src: '/subh/shubhdevelopres0005.jpg.jpeg', label: 'Building View' },
     ],
     amenities: [
       { icon: "FaLeaf", name: "Landscaped Gardens" },
@@ -494,12 +492,12 @@ export const projects = [
     tagline: '2 BHK Apartments & Shops',
     location: 'Kalol, Gandhinagar',
     bg: 'pc-bg-1',
-    heroImg: '/logo.png',
+    heroImg: '/sneh residancy/snehresidancy_page-0005.jpg',
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '',
-    noDetail: true,
+    brochure: '/sneh residancy/snehresidancy.pdf',
+    // noDetail: true,
     description:
       'Sneh Residency is a warm and inviting residential community designed for families who value togetherness. Thoughtfully planned apartments in a serene, tree-lined setting.',
     highlights: [
@@ -509,7 +507,8 @@ export const projects = [
       'Modern amenities and safety features',
     ],
     gallery: [
-      { src: '/2026/04/sneh-residency.jpg', label: 'Building View' },
+      { src: '/sneh residancy/snehresidancy_page-0004.jpg', label: 'Building View' },
+      { src: '/sneh residancy/snehresidancy_page-0005.jpg', label: 'Building View' },
     ],
     amenities: [
       { icon: "FaLeaf", name: "Gardens" },

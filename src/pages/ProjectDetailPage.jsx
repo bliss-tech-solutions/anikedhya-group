@@ -19,9 +19,8 @@ export default function ProjectDetailPage() {
   if (!project) return <Navigate to="/projects" replace />;
 
   const {
-    name, tagline, location, heroImg, status, config, storeys,
-    units, area, possession, rera, brochure,
-    description, highlights, gallery, amenities,
+    name, tagline, location, heroImg, status, rera, brochure,
+    description, highlights, gallery, amenities,ctaImage 
   } = project;
 
   return (
@@ -164,6 +163,11 @@ export default function ProjectDetailPage() {
                     </Link>
                   )}
                 </div>
+                {ctaImage && (
+                  <div className="pd-cta-card__image">
+                    <img src={ctaImage} alt={`${name} preview`} />
+                  </div>
+                )}
               </div>
 
             </div>
