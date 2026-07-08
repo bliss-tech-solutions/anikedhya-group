@@ -1,0 +1,83 @@
+/* ══════════════════════════════════════════
+   BUTTONS
+══════════════════════════════════════════ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary span,
+.btn-primary .arrow { position: relative; z-index: 1; }
+.btn-primary .arrow { transition: transform 0.3s; }
+.btn-primary:hover .arrow { transform: translateX(4px); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 31px;
+  background: transparent;
+  color: var(--text-head);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--border-hard);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  white-space: nowrap;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+@media (max-width: 640px) {
+  .btn-primary,
+  .btn-outline,
+  .btn--primary,
+  .btn--outline,
+  .btn {
+    padding: 12px 24px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    min-height: 44px; /* Apple recommended touch target */
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-outline,
+  .btn--primary,
+  .btn--outline,
+  .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

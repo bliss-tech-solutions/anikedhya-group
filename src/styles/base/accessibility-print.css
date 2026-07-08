@@ -1,0 +1,119 @@
+/* ══════════════════════════════════════════
+   TOUCH & ACCESSIBILITY IMPROVEMENTS
+   (site-wide, load this file LAST so it can
+   override anything above)
+══════════════════════════════════════════ */
+
+/* Larger tap targets on touch devices */
+@media (max-width: 1024px) {
+  .gallery-tab,
+  .proj-card__enquire,
+  .pd-chip,
+  .footer__social-link,
+  .navbar__cta,
+  .mobile-menu__close,
+  .career-job__toggle {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .location__point,
+  .amenity-row,
+  .contact__info-item,
+  .footer__links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Prevent horizontal overflow everywhere */
+img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+table { width: 100%; overflow-x: auto; display: block; }
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Smooth image loading placeholder backgrounds */
+.proj-card__img,
+.amenity-feat__img,
+.gallery__item-placeholder,
+.pd-gallery__main img,
+.pd-gallery__thumb {
+  background-color: var(--bg-card);
+}
+
+/* Safe area insets for notched phones (site-wide) */
+@supports (padding: max(0px)) {
+  .navbar {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+  .mobile-menu {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+  }
+  .footer {
+    padding-bottom: max(36px, env(safe-area-inset-bottom));
+  }
+  .hero__stats {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* ══════════════════════════════════════════
+   PRINT STYLES
+══════════════════════════════════════════ */
+@media print {
+  .navbar,
+  .mobile-menu,
+  .mobile-menu__backdrop,
+  .hero__scroll,
+  .hero__grid,
+  .hero__glow,
+  .footer__social,
+  .navbar__hamburger,
+  .footer { display: none !important; }
+
+  body { background: white !important; color: black !important; font-size: 12pt; }
+
+  .container { max-width: 100%; padding: 0 20px; }
+
+  .hero { min-height: auto; height: auto; padding: 40px 0; }
+
+  .page-section { padding: 30px 0; break-inside: avoid; }
+
+  .proj-card,
+  .amenity-feat,
+  .nm-article,
+  .value-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ddd;
+  }
+
+  a { color: var(--text-head) !important; text-decoration: underline; }
+
+  .btn-primary,
+  .btn-outline {
+    border: 1px solid #333;
+    background: transparent !important;
+    color: #333 !important;
+  }
+}

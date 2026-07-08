@@ -1,0 +1,34 @@
+/* ══════════════════════════════════════════════════════════════
+   MASTER STYLESHEET
+   Single entry point — import this file in main.jsx only.
+   Order matters for the cascade — keep it as-is.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Base: variables, reset, utilities, animations, buttons ── */
+@import url("./styles/base/base.css");
+@import url("./styles/base/reveal-animations.css");
+@import url("./styles/base/buttons.css");
+
+/* ── Components: shared UI pieces ── */
+@import url("./styles/components/navbar.css");
+@import url("./styles/components/page-hero.css");
+@import url("./styles/components/hero.css");
+@import url("./styles/components/showcase.css");
+@import url("./styles/components/footer.css");
+
+/* ── Pages: full-page section styles ── */
+@import url("./styles/pages/about.css");
+@import url("./styles/pages/projects.css");
+@import url("./styles/pages/gallery.css");
+@import url("./styles/pages/amenities.css");
+@import url("./styles/pages/location.css");
+@import url("./styles/pages/contact.css");
+@import url("./styles/pages/values-timeline.css");
+@import url("./styles/pages/project-detail.css");
+@import url("./styles/pages/career.css");
+@import url("./styles/pages/news-media.css");
+@import url("./styles/pages/channel-partner.css");
+@import url("./styles/pages/events.css");
+
+/* ── Must be LAST — overrides tap targets, focus, print ── */
+@import url("./styles/base/accessibility-print.css");

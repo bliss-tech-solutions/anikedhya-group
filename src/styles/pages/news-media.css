@@ -1,0 +1,68 @@
+/* ══════════════════════════════════════════
+   NEWS & MEDIA PAGE
+   NOTE: base (non-media-query) rules for
+   .nm-* classes were not present in the
+   original stylesheet — only responsive
+   overrides existed. Add your base/desktop
+   styles for these classes above the queries
+   below, then keep the breakpoints as-is.
+══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .nm-featured__card { grid-template-columns: 1fr; }
+  .nm-featured__image { min-height: 280px; }
+  .nm-featured__content { padding: 36px 32px; }
+  .nm-articles__grid { grid-template-columns: 1fr 1fr; }
+  .nm-press__logos { grid-template-columns: repeat(3, 1fr); }
+  .nm-awards__grid { grid-template-columns: 1fr 1fr; }
+  .nm-mediakit__grid { grid-template-columns: 1fr; max-width: 560px; }
+}
+
+@media (max-width: 768px) {
+  .nm-featured { padding: 56px 0; }
+  .nm-articles { padding: 48px 0 56px; }
+  .nm-press { padding: 56px 0; }
+  .nm-awards { padding: 56px 0; }
+  .nm-mediakit { padding: 56px 0; }
+  .nm-featured__image { min-height: 240px; }
+  .nm-featured__content { padding: 28px 24px; }
+  .nm-featured__title { font-size: clamp(18px, 4vw, 26px); }
+  .nm-article__image { height: 180px; }
+  .nm-articles__header { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 640px) {
+  .nm-stats-bar__inner { justify-content: flex-start; flex-wrap: wrap; }
+  .nm-stat {
+    flex: 1 1 45%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    align-items: flex-start;
+    padding: 14px 16px;
+    min-width: 120px;
+  }
+  .nm-stat:nth-child(odd) { border-right: 1px solid rgba(255, 255, 255, 0.07); }
+  .nm-stat:nth-last-child(-n+2) { border-bottom: none; }
+  .nm-stat__number { font-size: 24px; }
+  .nm-articles__grid { grid-template-columns: 1fr; gap: 16px; }
+  .nm-press__logos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .nm-awards__grid { grid-template-columns: 1fr; gap: 14px; }
+  .nm-article__body { padding: 18px 18px; }
+  .nm-article__title { font-size: 15px; }
+  .nm-article__excerpt { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .nm-featured__image { min-height: 200px; }
+  .nm-featured__content { padding: 22px 18px; }
+  .nm-featured__excerpt { font-size: 13px; }
+  .nm-stat { padding: 12px 12px; }
+  .nm-stat__number { font-size: 22px; }
+  .nm-press__logo { padding: 20px 12px; }
+  .nm-press__logo-abbr { font-size: 18px; }
+  .nm-award-card { padding: 24px 20px; }
+  .nm-award-card__year { font-size: 26px; }
+  .nm-award-card__title { font-size: 15px; }
+  .nm-mediakit__card { padding: 28px 24px; }
+  .nm-mediakit__card-title { font-size: 17px; }
+  .nm-article__image { height: 160px; }
+}

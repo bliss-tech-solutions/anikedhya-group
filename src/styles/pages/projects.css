@@ -1,0 +1,231 @@
+/* ══════════════════════════════════════════
+   PROJECT CARDS
+══════════════════════════════════════════ */
+.projects-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Card base ── */
+.proj-card {
+  display: block;              /* works as <Link> (anchor) */
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hard);
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+  cursor: pointer;
+}
+.proj-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.13);
+  transform: translateY(-5px);
+  border-color: var(--gold-border);
+}
+
+/* ── Legacy card — not clickable ── */
+.proj-card--legacy {
+  cursor: default;
+}
+.proj-card--legacy:hover {
+  transform: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* ── Image area ── */
+.proj-card__img {
+  height: 260px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg-card);   /* placeholder while loading */
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.proj-card:hover .proj-card__img {
+  transform: scale(1.05);
+}
+.proj-card--legacy:hover .proj-card__img {
+  transform: none;
+}
+
+/* ── Status badge ── */
+.proj-card__status {
+  position: absolute;
+  top: 14px; right: 14px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* ── Dark gradient at bottom of image ── */
+.proj-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(16,12,8,0.72) 0%,
+    rgba(16,12,8,0.18) 45%,
+    transparent 100%
+  );
+}
+
+/* ── Text body ── */
+.proj-card__body {
+  padding: 24px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.proj-card__tag {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 7px;
+  line-height: 1.4;
+
+  /* clamp long taglines to 1 line */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.proj-card__name {
+  font-family: var(--font-serif);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 500;
+  color: var(--text-head);
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+
+.proj-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.proj-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Bottom action row ── */
+.proj-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border-hard);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+/* "View Details →" */
+.proj-card__link {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+.proj-card:hover .proj-card__link { gap: 12px; }
+
+/* "Enquire" */
+.proj-card__enquire {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border: 1px solid var(--border-hard);
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+.proj-card__enquire:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-faint);
+}
+
+/* "Successfully Delivered ✓" */
+.proj-card__legacy-tag {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #4CAF82;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 1280px) {
+  .projects-full-grid { gap: 22px; }
+}
+
+@media (max-width: 1024px) {
+  .projects-full-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-full-grid { gap: 16px; }
+  .proj-card__img { height: 230px; }
+  .proj-card__name { font-size: 18px; }
+  .proj-card__body { padding: 20px 20px 18px; }
+}
+
+@media (max-width: 640px) {
+  .projects-full-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .proj-card__img { height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .proj-card__img { height: 200px; }
+  .proj-card__body { padding: 16px 16px 14px; }
+  .proj-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .proj-card__enquire {
+    text-align: center;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

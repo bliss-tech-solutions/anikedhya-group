@@ -1,0 +1,89 @@
+/* ══════════════════════════════════════════
+   ABOUT SECTION
+══════════════════════════════════════════ */
+.about {
+  padding: 80px 0;
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.about__image-wrap { position: relative; }
+.about__image-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow: hidden;
+}
+.about__image-accent {
+  position: absolute;
+  bottom: -20px; right: -20px;
+  width: 160px; height: 160px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+.about__values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.about__value {
+  padding: 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hard);
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.about__value::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width 0.4s;
+}
+.about__value:hover::before { width: 100%; }
+.about__value:hover {
+  border-color: var(--gold-border);
+  box-shadow: 0 4px 16px rgba(184,146,42,0.07);
+}
+.about__value-icon { font-size: 20px; margin-bottom: 8px; }
+.about__value-title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-head);
+  margin-bottom: 4px;
+}
+.about__value-text { font-size: 12px; color: var(--text-muted); line-height: 1.65; }
+
+@media (max-width: 1024px) {
+  .about { padding: 64px 0; }
+  .about__grid { grid-template-columns: 1fr; gap: 40px; }
+  .about__image-placeholder { aspect-ratio: 16/10; }
+}
+@media (max-width: 768px) {
+  .about { padding: 52px 0; }
+  .about__image-accent { display: none; }
+  .about__image-placeholder { aspect-ratio: 4/3; }
+}
+@media (max-width: 640px) {
+  .about { padding: 44px 0; }
+  .about__values { grid-template-columns: 1fr; gap: 10px; margin-top: 24px; }
+  .about__value { padding: 16px; }
+}
+@media (max-width: 480px) {
+  .about__image-placeholder { aspect-ratio: 3/2; }
+  .about__value-title { font-size: 14px; }
+  .about__value-text { font-size: 11px; }
+}
