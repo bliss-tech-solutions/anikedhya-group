@@ -28,10 +28,10 @@ const values = [
 
 const milestones = [
   { year: '2008', event: 'Founded in Ahmedabad with a vision for luxury real estate.' },
-  { year: '2012', event: 'Delivered first landmark project in Gota — 200+ families housed.' },
+  { year: '2012', event: 'Delivered first landmark project in Gota 200+ families housed.' },
   { year: '2016', event: 'Expanded to commercial & mixed-use developments.' },
   { year: '2020', event: 'Won "Best Luxury Developer" at Times Real Estate Awards.' },
-  { year: '2024', event: 'Launched Anikedhya Emperors — our most iconic G+14 tower.' },
+  { year: '2024', event: 'Launched Anikedhya Emperors our most iconic G+14 tower.' },
 ];
 
 export default function AboutPage() {
@@ -70,14 +70,21 @@ export default function AboutPage() {
               </span>
               <h2 className="section-title">A Trusted Name in<br /><em>Luxury Living</em></h2>
               <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-                Anikedhya Emperors is a masterpiece of architectural grandeur a G+14 residential
-                tower in the heart of Gota, designed for those who believe their home should reflect
-                the life they've built.
+                Since 2017, Anikedhya Group has emerged as a progressive force in the
+                infrastructure landscape, driven by a vision to shape enduring urban
+                environments.
+              </p>
+              <p className="section-subtitle" style={{ marginBottom: '16px' }}>
+                Built on the pillars of trust, precision, and uncompromising quality,
+                the group has consistently delivered excellence across every project.
+                With a portfolio of 14+ landmark developments, each creation reflects
+                thoughtful planning, architectural finesse, and long-term value.
               </p>
               <p className="section-subtitle" style={{ marginBottom: '32px' }}>
-                With neo-classical architecture, lush green courtyards, a rooftop retreat, ground
-                floor retail, and over 40 world class amenities Anikedhya Emperors redefines
-                premium living in Ahmedabad's most sought-after suburb.
+                Our approach blends innovation with functionality, ensuring spaces that
+                are not only structurally sound but also future-ready. Committed to
+                redefining cityscapes, Anikedhya Group continues to craft developments
+                that stand as symbols of strength, sophistication, and lasting impact.
               </p>
               <Link to="/contact" className="btn-primary">
                 <span>Get in Touch</span>

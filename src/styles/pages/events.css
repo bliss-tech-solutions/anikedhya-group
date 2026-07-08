@@ -24,6 +24,8 @@
 .ev-header__loc {
   font-size: 13px;
   color: var(--text-muted);
+  display: flex;
+  gap:8px;
 }
 .ev-header__title {
   font-family: var(--font-serif);

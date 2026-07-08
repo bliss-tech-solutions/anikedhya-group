@@ -12,7 +12,7 @@ const featured = {
     date: 'April 15, 2025',
     title: 'Anikedhya Group Unveils Its Most Ambitious Luxury Residential Project in Pune',
     excerpt:
-        'Setting a new benchmark for premium living, Anikedhya Group officially announces the launch of its flagship development — a curated collection of sky residences redefining elegance in Pune\'s most sought-after locale.',
+        'Setting a new benchmark for premium living, Anikedhya Group officially announces the launch of its flagship development a curated collection of sky residences redefining elegance in Pune\'s most sought-after locale.',
     image: '/2026/04/anikedhya-aerial.jpg',
     readTime: '4 min read',
 };

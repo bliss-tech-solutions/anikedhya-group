@@ -1,3 +1,4 @@
+// ProjectsPage.jsx
 import { useReveal } from '../components/useReveal';
 import PageHero from '../components/PageHero';
 import { Link } from 'react-router-dom';
@@ -5,9 +6,9 @@ import { projects } from '../data/projects';
 import { FaMapMarkerAlt, FaHome } from 'react-icons/fa';
 
 const statusColor = {
-  Ongoing:   '#B8922A',
+  Ongoing: '#B8922A',
   Completed: '#4CAF82',
-  Upcoming:  '#7A8FA6',
+  Upcoming: '#7A8FA6',
   Delivered: '#8A7A5C',
 };
 
@@ -35,7 +36,7 @@ export default function ProjectsPage() {
             <div className="section-tag"><span className="gold-line" />Current Portfolio</div>
             <h2 className="section-title">Ongoing & <em>Completed</em> Projects</h2>
             <p className="section-subtitle">
-              Explore our signature developments — each crafted with precision, purpose and premium finishes.
+              Explore our signature developments each crafted with precision, purpose and premium finishes.
             </p>
           </div>
 
@@ -46,7 +47,6 @@ export default function ProjectsPage() {
                 key={p.slug}
                 className={`proj-card reveal-scale delay-${(i % 3) + 1}`}
               >
-                {/* Card image — use heroImg directly */}
                 <div
                   className="proj-card__img"
                   style={{ backgroundImage: `url('${p.heroImg}')` }}
@@ -100,34 +100,59 @@ export default function ProjectsPage() {
           </div>
 
           <div className="projects-full-grid">
-            {legacyProjects.map((p, i) => (
-              <div
-                key={p.slug}
-                className={`proj-card proj-card--legacy reveal-scale delay-${(i % 3) + 1}`}
-              >
-                <div
-                  className="proj-card__img"
-                  style={{ backgroundImage: `url('${p.heroImg}')` }}
-                >
+            {legacyProjects.map((p, i) => {
+              const CardWrapper = ({ children }) =>
+                p.noDetail ? (
                   <div
-                    className="proj-card__status"
-                    style={{ background: statusColor[p.status] ?? '#4CAF82' }}
+                    key={p.slug}
+                    className={`proj-card proj-card--legacy reveal-scale delay-${(i % 3) + 1}`}
+                    style={{ cursor: 'default' }}
                   >
-                    {p.status}
+                    {children}
                   </div>
-                  <div className="proj-card__overlay" />
-                </div>
-                <div className="proj-card__body">
-                  <h3 className="proj-card__name">{p.name}</h3>
-                  <div className="proj-card__meta">
-                    <span><FaMapMarkerAlt /> {p.location}</span>
+                ) : (
+                  <Link
+                    to={`/projects/${p.slug}`}
+                    key={p.slug}
+                    className={`proj-card proj-card--legacy reveal-scale delay-${(i % 3) + 1}`}
+                  >
+                    {children}
+                  </Link>
+                );
+
+              return (
+                <CardWrapper key={p.slug}>
+                  <div
+                    className="proj-card__img"
+                    style={{ backgroundImage: `url('${p.heroImg}')` }}
+                  >
+                    <div
+                      className="proj-card__status"
+                      style={{ background: statusColor[p.status] ?? '#4CAF82' }}
+                    >
+                      {p.status}
+                    </div>
+                    <div className="proj-card__overlay" />
                   </div>
-                  <div className="proj-card__actions">
-                    <span className="proj-card__legacy-tag">Successfully Delivered ✓</span>
+                  <div className="proj-card__body">
+                    <div className="proj-card__tag">{p.tagline}</div>
+                    <h3 className="proj-card__name">{p.name}</h3>
+                    <div className="proj-card__meta">
+                      <span><FaMapMarkerAlt /> {p.location}</span>
+                    </div>
+                    <div className="proj-card__actions">
+                      <span className="proj-card__link">
+                        {p.noDetail ? 'Coming Soon' : 'View Details'}{' '}
+                        {!p.noDetail && <span>→</span>}
+                      </span>
+                      <span className="proj-card__legacy-tag">
+                        Successfully Delivered ✓
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -5,50 +5,48 @@ const SLIDES = [
   {
     id: 1,
     src: '/2026/04/anikedhya-aerial.jpg',
-    alt: 'Anikedhya Emperors — Aerial View',
+    alt: 'Anikedhya Emperors Aerial View',
     label: 'Anikedhya Emperors',
+    position: 'center center',
   },
   {
     id: 2,
     src: '/2026/04/anikedhya-building-front.jpg',
-    alt: 'Anikedhya Emperors — Building Front',
+    alt: 'Anikedhya Emperors Building Front',
     label: 'Premium Architecture',
-  },
-  {
-    id: 3,
-    src: '/2026/04/anikedhya-living-room.jpg',
-    alt: 'Anikedhya — Luxury Living Room',
-    label: 'Luxury Interiors',
+    position: 'center top',   // protects the building's crown/top
   },
   {
     id: 4,
     src: '/2026/04/anikedhya-rooftop-gazebo.jpg',
-    alt: 'Anikedhya — Rooftop Gazebo',
+    alt: 'Anikedhya Rooftop Gazebo',
     label: 'World-Class Amenities',
+    position: 'center center',
   },
   {
     id: 5,
     src: '/2026/04/anikedhya-balcony-view.jpg',
-    alt: 'Anikedhya — Balcony Views',
+    alt: 'Anikedhya Balcony Views',
     label: 'Breathtaking Views',
+    position: 'center center',
   },
 ];
 
 const SLIDE_DURATION = 5000;
-const FADE_DURATION  = 1200;
+const FADE_DURATION = 1200;
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
-  const [next,    setNext]    = useState(null);
-  const [fading,  setFading]  = useState(false);
+  const [next, setNext] = useState(null);
+  const [fading, setFading] = useState(false);
 
   const currentRef = useRef(0);
-  const fadingRef  = useRef(false);
-  const timerRef   = useRef(null);
+  const fadingRef = useRef(false);
+  const timerRef = useRef(null);
 
   // Keep refs in sync with state
   currentRef.current = current;
-  fadingRef.current  = fading;
+  fadingRef.current = fading;
 
   // ── Safe slide getter — never returns undefined ──
   const getSlide = (idx) => SLIDES[idx] ?? SLIDES[0];
@@ -110,13 +108,16 @@ export default function Hero() {
             key={slide.id}
             className={[
               'hero__slide',
-              idx === current && !fading ? 'hero__slide--active'   : '',
-              idx === current &&  fading ? 'hero__slide--leaving'  : '',
-              idx === next               ? 'hero__slide--entering' : '',
+              idx === current && !fading ? 'hero__slide--active' : '',
+              idx === current && fading ? 'hero__slide--leaving' : '',
+              idx === next ? 'hero__slide--entering' : '',
             ]
               .filter(Boolean)
               .join(' ')}
-            style={{ backgroundImage: `url(${slide.src})` }}
+            style={{
+              backgroundImage: `url(${slide.src})`,
+              backgroundPosition: slide.position || 'center center',
+            }}
             role="img"
             aria-label={slide.alt}
           />

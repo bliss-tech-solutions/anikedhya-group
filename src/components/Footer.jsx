@@ -40,7 +40,7 @@ export default function Footer() {
 
           <div>
             <div className="footer__brand-name"> <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
-              <img src="/logo_n.png" alt="Anikedhya Group" className="navbar__logo-img" />
+              <img src="/logo.png" alt="Anikedhya Group" className="navbar__logo-img" />
             </Link></div>
 
             <p className="footer__brand-desc">
@@ -93,7 +93,7 @@ export default function Footer() {
                 RERA Registered
               </div>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: '14px', color: 'var(--gold)' }}>
-                P51700055555
+                PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal Corporation/MAA16550/070326/311230
               </div>
             </div>
           </div>

@@ -45,10 +45,10 @@ export default function About() {
               Building Dreams,<br /><em>Creating Legacies</em>
             </h2>
             <p className="section-subtitle" style={{ marginBottom: '16px' }}>
-              Anikedhya Emperors is a masterpiece of architectural grandeur — a G+14 residential tower in the heart of Gota, designed for those who believe their home should reflect the life they've built.
+              Anikedhya Emperors is a masterpiece of architectural grandeur a G+14 residential tower in the heart of Gota, designed for those who believe their home should reflect the life they've built.
             </p>
             <p className="section-subtitle" style={{ marginBottom: '32px' }}>
-              With neo-classical architecture, lush green courtyards, a rooftop retreat, ground floor retail, and over 40 world-class amenities — Anikedhya Emperors redefines premium living in Ahmedabad's most sought-after suburb.
+              With neo-classical architecture, lush green courtyards, a rooftop retreat, ground floor retail, and over 20 world-class amenities Anikedhya Emperors redefines premium living in Ahmedabad's most sought-after suburb.
             </p>
             <div className="about__values">
               {values.map((v, i) => (

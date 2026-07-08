@@ -4,14 +4,7 @@ import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 // Top-level nav structure — items with `children` become dropdowns
 const links = [
   { label: 'Home', href: '/' },
-  {
-    label: 'Company',
-    children: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
-      { label: 'Channel Partner', href: '/channel-partner' },
-    ],
-  },
+  { label: 'About Us', href: '/about' },
   { label: 'Projects', href: '/projects' },
   {
     label: 'Explore',
@@ -20,6 +13,8 @@ const links = [
       { label: 'Amenities', href: '/amenities' },
       { label: 'Location', href: '/location' },
       { label: 'Events', href: '/event' },
+      { label: 'Career', href: '/career' },
+      { label: 'Channel Partner', href: '/channel-partner' },
     ],
   },
   { label: 'Contact', href: '/contact' },

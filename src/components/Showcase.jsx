@@ -34,7 +34,7 @@ export default function Showcase() {
               <p className="showcase__visual-quote">
                 "The finest architecture is not built with stone alone, but with the dreams of those who will call it home."
               </p>
-              <span className="showcase__visual-author">— Anikedhya Group Philosophy</span>
+              <span className="showcase__visual-author">Anikedhya Group Philosophy</span>
             </div>
           </div>
 

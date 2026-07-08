@@ -2,6 +2,8 @@ import { useReveal } from '../components/useReveal';
 import PageHero from '../components/PageHero';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { FaHome, FaMap, FaPhone } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const benefits = [
   {
@@ -12,7 +14,7 @@ const benefits = [
   {
     icon: '🏆',
     title: 'Premium Brand to Sell',
-    desc: 'Associate with a trusted, award-winning luxury brand that sells itself — making your conversations with clients effortless.',
+    desc: 'Associate with a trusted, award-winning luxury brand that sells itself making your conversations with clients effortless.',
   },
   {
     icon: '📚',
@@ -27,7 +29,7 @@ const benefits = [
   {
     icon: '📊',
     title: 'Real-Time Inventory',
-    desc: 'Access live inventory status, pricing and availability through our partner portal — always stay one step ahead.',
+    desc: 'Access live inventory status, pricing and availability through our partner portal always stay one step ahead.',
   },
   {
     icon: '🎁',
@@ -52,30 +54,7 @@ const projects = [
     img: '/2026/04/anikedhya-building-front.jpg',
     slug: '/projects/anikedhya-emperors',
   },
-  {
-    name: 'ANIKEDHYA ALTEZA',
-    type: 'Residential • Completed',
-    config: '4 BHK Premium Residences',
-    location: 'Satellite, Ahmedabad',
-    img: '/2026/04/anikedhya-building-corner.jpg',
-    slug: '/projects/anikedhya-alteza',
-  },
-  {
-    name: 'Anikedhya Capitol',
-    type: 'Residential • Completed',
-    config: '3 & 4 BHK Sky Residences',
-    location: 'Bodakdev, Ahmedabad',
-    img: '/2026/04/anikedhya-aerial-view.jpg',
-    slug: '/projects/anikedhya-capitol',
-  },
-  {
-    name: 'Anikedhya Atlantis',
-    type: 'Residential • Completed',
-    config: '2 & 3 BHK Apartments',
-    location: 'Bodakdev, Ahmedabad',
-    img: '/2026/04/anikedhya-building-side.jpg',
-    slug: '/projects/anikedhya-atlantis',
-  },
+ 
 ];
 
 const faqs = [
@@ -138,16 +117,13 @@ export default function ChannelPartner() {
               <div className="cp-stat__num">500+</div>
               <div className="cp-stat__label">Active Partners</div>
             </div>
-            <div className="cp-stat reveal delay-1">
-              <div className="cp-stat__num">₹50Cr+</div>
-              <div className="cp-stat__label">Commissions Paid</div>
-            </div>
+
             <div className="cp-stat reveal delay-2">
               <div className="cp-stat__num">15</div>
               <div className="cp-stat__label">Days to Commission</div>
             </div>
             <div className="cp-stat reveal delay-3">
-              <div className="cp-stat__num">4</div>
+              <div className="cp-stat__num">1</div>
               <div className="cp-stat__label">Active Projects</div>
             </div>
           </div>
@@ -161,7 +137,7 @@ export default function ChannelPartner() {
             <div className="section-tag"><span className="gold-line" />Why Partner With Us</div>
             <h2 className="section-title">Everything You Need to <em>Succeed</em></h2>
             <p className="section-subtitle">
-              We go beyond commissions — we build long-term partnerships that help you grow a sustainable, profitable real estate business.
+              We go beyond commissions we build long-term partnerships that help you grow a sustainable, profitable real estate business.
             </p>
           </div>
           <div className="cp-benefits-grid">
@@ -215,8 +191,8 @@ export default function ChannelPartner() {
                   <div className="cp-proj-card__type">{p.type}</div>
                   <h3 className="cp-proj-card__name">{p.name}</h3>
                   <div className="cp-proj-card__meta">
-                    <span>📍 {p.location}</span>
-                    <span>🏠 {p.config}</span>
+                    <span className='cp-proj-data'> <FaMap/> {p.location}</span>
+                    <span className='cp-proj-data'> <FaHome/> {p.config}</span>
                   </div>
                   <Link to={p.slug} className="proj-card__link">View Project →</Link>
                 </div>
@@ -238,21 +214,21 @@ export default function ChannelPartner() {
               </p>
               <div className="cp-contact-items">
                 <div className="cp-contact-item">
-                  <div className="cp-contact-icon">📞</div>
+                  <div className="cp-contact-icon"><FaPhone /></div>
                   <div>
                     <div className="cp-contact-label">Call Us</div>
                     <div className="cp-contact-value">+91 85118 58835</div>
                   </div>
                 </div>
                 <div className="cp-contact-item">
-                  <div className="cp-contact-icon">📧</div>
+                  <div className="cp-contact-icon"><MdEmail /></div>
                   <div>
                     <div className="cp-contact-label">Email Us</div>
                     <div className="cp-contact-value">anikedhyamarketing@gmail.com</div>
                   </div>
                 </div>
                 <div className="cp-contact-item">
-                  <div className="cp-contact-icon">📍</div>
+                  <div className="cp-contact-icon"><FaMap/></div>
                   <div>
                     <div className="cp-contact-label">Visit Us</div>
                     <div className="cp-contact-value">Gota, Ahmedabad, Gujarat</div>

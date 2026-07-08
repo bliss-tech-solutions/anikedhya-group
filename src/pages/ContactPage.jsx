@@ -55,7 +55,7 @@ export default function ContactPage() {
               </span>
               <h2 className="section-title">Let's Start a<br /><em>Conversation</em></h2>
               <p className="section-subtitle" style={{ marginBottom: '0' }}>
-                Reach out through any channel — we're here to help you find your dream home.
+                Reach out through any channel we're here to help you find your dream home.
               </p>
 
               <div className="contact__info-items">

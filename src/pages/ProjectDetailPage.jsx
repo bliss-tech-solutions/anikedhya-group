@@ -2,11 +2,12 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useReveal } from '../components/useReveal';
 import { projects } from '../data/projects';
+import { iconMap } from "../data/iconMap";
 
 const statusColor = {
-  Ongoing:   '#B8922A',
+  Ongoing: '#B8922A',
   Completed: '#4CAF82',
-  Upcoming:  '#7A8FA6',
+  Upcoming: '#7A8FA6',
 };
 
 export default function ProjectDetailPage() {
@@ -77,13 +78,27 @@ export default function ProjectDetailPage() {
                 </ul>
               </div>
 
-              {/* Amenities chips */}
+              {/* Amenities chips — supports both data shapes:
+                  { icon, name } objects (most projects) and
+                  plain strings (e.g. Capitol 2) */}
               <div className="pd-amenities-wrap">
                 <h3 className="pd-sub-heading">Amenities</h3>
                 <div className="pd-amenity-chips">
-                  {amenities.map((a) => (
-                    <span key={a} className="pd-chip">{a}</span>
-                  ))}
+                  {amenities.map((a, i) => {
+                    const isObj = typeof a === 'object' && a !== null;
+                    const key = isObj ? a.name : a;
+                    const IconComp = isObj && typeof a.icon === 'string' ? iconMap[a.icon] : null;
+                    return (
+                      <span key={key ?? i} className="pd-chip">
+                        {IconComp && (
+                          <span className="pd-chip__icon" style={{ marginRight: 6 }}>
+                            <IconComp />
+                          </span>
+                        )}
+                        {isObj ? a.name : a}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
 

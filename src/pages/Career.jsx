@@ -8,31 +8,9 @@ import { useReveal } from '../components/useReveal';
    DATA
 ───────────────────────────────────────── */
 const openings = [
+ 
   {
     id: 1,
-    title: 'Senior Architect',
-    department: 'Design & Architecture',
-    location: 'Ahmedabad, Gujarat',
-    type: 'Full-Time',
-    experience: '5–8 Years',
-    description:
-      'Lead architectural design for premium residential projects. Collaborate with clients and engineers to deliver elegant, functional spaces that reflect our commitment to luxury living.',
-    responsibilities: [
-      'Develop detailed architectural plans and 3D visualizations',
-      'Coordinate with structural and MEP engineering teams',
-      'Ensure design compliance with local building codes',
-      'Present concepts to clients and incorporate feedback',
-      'Mentor junior architects and interns',
-    ],
-    requirements: [
-      'B.Arch / M.Arch from a recognized institution',
-      '5+ years in residential or luxury real estate projects',
-      'Proficiency in AutoCAD, Revit, SketchUp & V-Ray',
-      'Strong portfolio showcasing premium project work',
-    ],
-  },
-  {
-    id: 2,
     title: 'Project Manager',
     department: 'Project Management',
     location: 'Ahmedabad, Gujarat',
@@ -54,54 +32,32 @@ const openings = [
       'Excellent leadership and communication skills',
     ],
   },
+ 
+  // {
+  //   id: 4,
+  //   title: 'Digital Marketing Executive',
+  //   department: 'Marketing & Sales',
+  //   location: 'Ahmedabad, Gujarat',
+  //   type: 'Full-Time',
+  //   experience: '2–4 Years',
+  //   description:
+  //     "Drive our digital presence and lead-generation campaigns across platforms. Shape the brand narrative for one of Gujarat's most distinguished real estate groups.",
+  //   responsibilities: [
+  //     'Plan and execute social media, SEO and PPC campaigns',
+  //     'Create compelling content for website, blogs and newsletters',
+  //     'Analyze campaign performance and optimize ROI',
+  //     'Manage CRM and marketing automation tools',
+  //     'Coordinate with agencies for video and creative production',
+  //   ],
+  //   requirements: [
+  //     'Bachelors in Marketing, Communications or related field',
+  //     '2+ years in digital marketing (real estate preferred)',
+  //     'Hands-on with Google Ads, Meta Ads and analytics tools',
+  //     'Strong copywriting and visual storytelling skills',
+  //   ],
+  // },
   {
-    id: 3,
-    title: 'Interior Designer',
-    department: 'Design & Architecture',
-    location: 'Ahmedabad, Gujarat',
-    type: 'Full-Time',
-    experience: '3–6 Years',
-    description:
-      'Create stunning interior concepts for model apartments, clubhouses and common areas that embody refined luxury and modern comfort.',
-    responsibilities: [
-      'Develop mood boards, material palettes and furniture layouts',
-      'Source premium materials, fixtures and furnishings',
-      'Collaborate with architects on integrated design solutions',
-      'Manage vendor relationships for custom millwork and décor',
-      'Supervise installation and styling on site',
-    ],
-    requirements: [
-      'Diploma / Degree in Interior Design',
-      '3+ years designing luxury residential or hospitality interiors',
-      'Proficiency in AutoCAD, 3ds Max and Adobe Creative Suite',
-      'Keen eye for detail and current design trends',
-    ],
-  },
-  {
-    id: 4,
-    title: 'Digital Marketing Executive',
-    department: 'Marketing & Sales',
-    location: 'Ahmedabad, Gujarat',
-    type: 'Full-Time',
-    experience: '2–4 Years',
-    description:
-      "Drive our digital presence and lead-generation campaigns across platforms. Shape the brand narrative for one of Gujarat's most distinguished real estate groups.",
-    responsibilities: [
-      'Plan and execute social media, SEO and PPC campaigns',
-      'Create compelling content for website, blogs and newsletters',
-      'Analyze campaign performance and optimize ROI',
-      'Manage CRM and marketing automation tools',
-      'Coordinate with agencies for video and creative production',
-    ],
-    requirements: [
-      'Bachelors in Marketing, Communications or related field',
-      '2+ years in digital marketing (real estate preferred)',
-      'Hands-on with Google Ads, Meta Ads and analytics tools',
-      'Strong copywriting and visual storytelling skills',
-    ],
-  },
-  {
-    id: 5,
+    id: 2,
     title: 'Sales Consultant',
     department: 'Marketing & Sales',
     location: 'Ahmedabad, Gujarat',
@@ -124,7 +80,7 @@ const openings = [
     ],
   },
   {
-    id: 6,
+    id: 3,
     title: 'Site Engineer',
     department: 'Construction',
     location: 'Ahmedabad, Gujarat',
@@ -200,7 +156,7 @@ export default function Career() {
         tag="Join Our Team"
         title="Build Legacies"
         em="With Us"
-        subtitle="Join a team that crafts more than buildings — we shape lifestyles, communities and futures."
+        subtitle="Join a team that crafts more than buildings we shape lifestyles, communities and futures."
         image="/2026/04/anikedhya-aerial.jpg"
       />
 
@@ -217,13 +173,13 @@ export default function Career() {
                 Where Passion Meets <em>Purpose</em>
               </h2>
               <p className="section-desc">
-                At Anikedhya Group, every team member is an artisan — contributing
+                At Anikedhya Group, every team member is an artisan contributing
                 their unique expertise to create residences that stand the test of
                 time. We foster a culture of excellence, integrity and continuous growth.
               </p>
               <p className="section-desc" style={{ marginTop: 16 }}>
                 Whether you're an architect envisioning skylines, an engineer
-                perfecting foundations, or a marketer telling our story — your
+                perfecting foundations, or a marketer telling our story your
                 work here will have lasting impact.
               </p>
             </div>
@@ -344,7 +300,7 @@ export default function Career() {
           ) : (
             <div className="career-openings__empty">
               <p>No openings in this department right now.</p>
-              <p>Send us your resume anyway — we're always looking for exceptional talent.</p>
+              <p>Send us your resume anyway we're always looking for exceptional talent.</p>
             </div>
           )}
         </div>

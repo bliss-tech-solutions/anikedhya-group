@@ -1,14 +1,45 @@
 import { useReveal } from '../components/useReveal';
 import PageHero from '../components/PageHero';
 import { Link } from 'react-router-dom';
+import { FaBuilding, FaHospital, FaPlaneDeparture, FaSchool, FaShoppingBag, FaTrain } from 'react-icons/fa';
 
 const points = [
-  { icon: '🚆', name: 'Ahmedabad Railway Station',              detail: 'Major railway connectivity across Gujarat and India.',           distance: '20 Min' },
-  { icon: '🏥', name: 'Zydus Hospital',                         detail: "One of Ahmedabad's leading multi-specialty hospitals.",           distance: '10 Min' },
-  { icon: '🛍️', name: 'D-Mart, Malls & Retail Zones',          detail: 'Shopping, restaurants and entertainment nearby.',                 distance: '5 Min'  },
-  { icon: '✈️', name: 'Sardar Vallabhbhai Patel Airport',       detail: 'Quick access to domestic and international flights.',            distance: '20 Min' },
-  { icon: '🏫', name: 'Schools & Colleges',                     detail: 'Top-rated educational institutions within easy reach.',           distance: '8 Min'  },
-  { icon: '🏢', name: 'SG Highway Business Hubs',               detail: 'Proximity to Ahmedabad\'s corporate and commercial corridors.',  distance: '15 Min' },
+  {
+    icon: <FaTrain />,
+    name: "Ahmedabad Railway Station",
+    detail: "Major railway connectivity across Gujarat and India.",
+    distance: "20 Min",
+  },
+  {
+    icon: <FaHospital />,
+    name: "Zydus Hospital",
+    detail: "One of Ahmedabad's leading multi-specialty hospitals.",
+    distance: "10 Min",
+  },
+  {
+    icon: <FaShoppingBag />,
+    name: "D-Mart, Malls & Retail Zones",
+    detail: "Shopping, restaurants and entertainment nearby.",
+    distance: "5 Min",
+  },
+  {
+    icon: <FaPlaneDeparture />,
+    name: "Sardar Vallabhbhai Patel Airport",
+    detail: "Quick access to domestic and international flights.",
+    distance: "20 Min",
+  },
+  {
+    icon: <FaSchool />,
+    name: "Schools & Colleges",
+    detail: "Top-rated educational institutions within easy reach.",
+    distance: "8 Min",
+  },
+  {
+    icon: <FaBuilding />,
+    name: "SG Highway Business Hubs",
+    detail: "Proximity to Ahmedabad's corporate and commercial corridors.",
+    distance: "15 Min",
+  },
 ];
 
 export default function LocationPage() {
@@ -35,7 +66,7 @@ export default function LocationPage() {
                 </span>
                 <h2 className="section-title">Everything is<br /><em>Close By</em></h2>
                 <p className="section-subtitle" style={{ marginBottom: '0' }}>
-                  Anikedhya Emperors sits at the heart of Gota — Ahmedabad's fastest-growing premium suburb — with seamless access to every destination that matters.
+                  Anikedhya Emperors sits at the heart of Gota Ahmedabad's fastest-growing premium suburb with seamless access to every destination that matters.
                 </p>
               </div>
               <div className="location__points reveal">
