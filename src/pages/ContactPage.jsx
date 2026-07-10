@@ -7,7 +7,7 @@ const info = [
   {
     icon: <FaLocationDot />,
     label: 'Address',
-    value: 'Gota, Ahmedabad,\nGujarat 380060, India',
+    value: 'Gota, Ahmedabad,\nGujarat 382481, India',
   },
   {
     icon: <FaPhone />,
@@ -23,7 +23,7 @@ const info = [
 
 export default function ContactPage() {
   useReveal();
-  const [form, setForm]           = useState({ name: '', email: '', phone: '', interest: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', interest: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
@@ -101,12 +101,9 @@ export default function ContactPage() {
                     <label htmlFor="interest">I'm Interested In</label>
                     <select id="interest" name="interest" value={form.interest} onChange={handleChange} required>
                       <option value="">Select a property type</option>
-                      <option value="luxury-apartment">Luxury Apartment</option>
-                      <option value="villa">Premium Villa</option>
-                      <option value="penthouse">Penthouse</option>
-                      <option value="commercial">Commercial Space</option>
-                      <option value="township">Township</option>
-                      <option value="investment">Investment Property</option>
+                      <option value="two-bhk-apartment">2 BHK Apartment</option>
+                      <option value="penthouse">3 & 4 BHK Penthouse</option>
+                      <option value="commercial">Commercial Space</option>  
                     </select>
                   </div>
                   <div className="form-group">

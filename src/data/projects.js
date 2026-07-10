@@ -337,8 +337,8 @@ export const projects = [
   {
     slug: 'siddharth-homes',
     name: 'Siddharth Homes',
-    tagline: 'Homes Crafted with Care',
-    location: 'Ahmedabad, Gujarat',
+    tagline: '2 BHK appertment & shops',
+    location: 'Vavol,Gandhinagar, Gujarat',
     bg: 'pc-bg-2',
     heroImg: '/Siddharth Homes/WhatsApp Image 2026-07-07 at 2.36.58 PM.jpeg',
     status: 'Completed',

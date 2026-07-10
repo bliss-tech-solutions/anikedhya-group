@@ -20,7 +20,7 @@ export default function ProjectDetailPage() {
 
   const {
     name, tagline, location, heroImg, status, rera, brochure,
-    description, highlights, gallery, amenities,ctaImage 
+    description, highlights = [], gallery = [], amenities = [], ctaImage
   } = project;
 
   return (
@@ -65,74 +65,80 @@ export default function ProjectDetailPage() {
               </p>
 
               {/* Highlights */}
-              <div className="pd-highlights">
-                <h3 className="pd-sub-heading">Key Highlights</h3>
-                <ul className="pd-hl-list">
-                  {highlights.map((h) => (
-                    <li key={h} className="pd-hl-item">
-                      <span className="pd-hl-dot" />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Amenities chips — supports both data shapes:
-                  { icon, name } objects (most projects) and
-                  plain strings (e.g. Capitol 2) */}
-              <div className="pd-amenities-wrap">
-                <h3 className="pd-sub-heading">Amenities</h3>
-                <div className="pd-amenity-chips">
-                  {amenities.map((a, i) => {
-                    const isObj = typeof a === 'object' && a !== null;
-                    const key = isObj ? a.name : a;
-                    const IconComp = isObj && typeof a.icon === 'string' ? iconMap[a.icon] : null;
-                    return (
-                      <span key={key ?? i} className="pd-chip">
-                        {IconComp && (
-                          <span className="pd-chip__icon" style={{ marginRight: 6 }}>
-                            <IconComp />
-                          </span>
-                        )}
-                        {isObj ? a.name : a}
-                      </span>
-                    );
-                  })}
+              {highlights.length > 0 && (
+                <div className="pd-highlights">
+                  <h3 className="pd-sub-heading">Key Highlights</h3>
+                  <ul className="pd-hl-list">
+                    {highlights.map((h) => (
+                      <li key={h} className="pd-hl-item">
+                        <span className="pd-hl-dot" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
+
+              {/* Amenities */}
+              {amenities.length > 0 && (
+                <div className="pd-amenities-wrap">
+                  <h3 className="pd-sub-heading">Amenities</h3>
+                  <div className="pd-amenity-chips">
+                    {amenities.map((a, i) => {
+                      const isObj = typeof a === 'object' && a !== null;
+                      const key = isObj ? a.name : a;
+                      const IconComp = isObj && typeof a.icon === 'string' ? iconMap[a.icon] : null;
+                      return (
+                        <span key={key ?? i} className="pd-chip">
+                          {IconComp && (
+                            <span className="pd-chip__icon" style={{ marginRight: 6 }}>
+                              <IconComp />
+                            </span>
+                          )}
+                          {isObj ? a.name : a}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* RERA */}
-              <div className="pd-rera">
-                <span className="pd-rera__label">RERA Reg. No.</span>
-                <span className="pd-rera__value">{rera}</span>
-              </div>
+              {rera && (
+                <div className="pd-rera">
+                  <span className="pd-rera__label">RERA Reg. No.</span>
+                  <span className="pd-rera__value">{rera}</span>
+                </div>
+              )}
             </div>
 
             {/* Right: gallery + CTA card */}
             <div className="pd-main__right">
 
               {/* Gallery */}
-              <div className="pd-gallery reveal-right">
-                <div className="pd-gallery__main">
-                  <img
-                    src={gallery[activeImg]?.src}
-                    alt={gallery[activeImg]?.label}
-                  />
-                </div>
-                {gallery.length > 1 && (
-                  <div className="pd-gallery__thumbs">
-                    {gallery.map((g, i) => (
-                      <button
-                        key={g.src}
-                        className={`pd-gallery__thumb${i === activeImg ? ' active' : ''}`}
-                        onClick={() => setActiveImg(i)}
-                        aria-label={g.label}
-                        style={{ backgroundImage: `url(${g.src})` }}
-                      />
-                    ))}
+              {gallery.length > 0 && (
+                <div className="pd-gallery reveal-right">
+                  <div className="pd-gallery__main">
+                    <img
+                      src={gallery[activeImg]?.src}
+                      alt={gallery[activeImg]?.label}
+                    />
                   </div>
-                )}
-              </div>
+                  {gallery.length > 1 && (
+                    <div className="pd-gallery__thumbs">
+                      {gallery.map((g, i) => (
+                        <button
+                          key={g.src}
+                          className={`pd-gallery__thumb${i === activeImg ? ' active' : ''}`}
+                          onClick={() => setActiveImg(i)}
+                          aria-label={g.label}
+                          style={{ backgroundImage: `url(${g.src})` }}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* CTA card */}
               <div className="pd-cta-card reveal-right delay-2">

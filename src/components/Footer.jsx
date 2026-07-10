@@ -26,7 +26,7 @@ const properties = [
 ];
 
 const contactInfo = [
-  { label: "Gota, Ahmedabad, Gujarat" },
+  { label: "Gota, Ahmedabad, Gujarat - 382481" },
   { label: "+91 85118 58835" },
   { label: "anikedhyamarketing@gmail.com" },
 ];

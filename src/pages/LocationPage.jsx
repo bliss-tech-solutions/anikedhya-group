@@ -99,7 +99,7 @@ export default function LocationPage() {
                     <div key={i} style={{ position: 'absolute', top: pos.top, left: pos.left, width: '6px', height: '6px', borderRadius: '50%', background: 'rgba(184,146,42,0.5)' }} />
                   ))}
                   <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.25 }}>
-                    {[['30%','18%'],['72%','30%'],['28%','65%'],['65%','78%']].map(([x, y], i) => (
+                    {[['30%', '18%'], ['72%', '30%'], ['28%', '65%'], ['65%', '78%']].map(([x, y], i) => (
                       <line key={i} x1={x} y1={y} x2="50%" y2="50%" stroke="#B8922A" strokeWidth="0.5" strokeDasharray="4,4" />
                     ))}
                   </svg>
@@ -111,10 +111,16 @@ export default function LocationPage() {
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', color: 'var(--text-head)', marginBottom: '4px' }}>Gota, Ahmedabad</div>
                   <div style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Gujarat, India</div>
                 </div>
-                <Link to="/contact" className="btn-primary" style={{ padding: '12px 24px', fontSize: '10px' }}>
+                <a
+                  href="https://maps.app.goo.gl/VX7ijeJDzyNkrXTW8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{ padding: '12px 24px', fontSize: '10px' }}
+                >
                   <span>Get Directions</span>
                   <span className="arrow">→</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

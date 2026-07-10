@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
 import { FaTrophy, FaStar } from 'react-icons/fa';
 
-const awards = [
-  {
-    icon: <FaTrophy />,
-    title: 'Best Luxury Developer 2024',
-    sub: 'Times Real Estate Awards',
-  },
-  {
-    icon: <FaStar />,
-    title: 'CRISIL DA1 Rating',
-    sub: "India's Highest Developer Grade",
-  },
-];
+// const awards = [
+//   {
+//     icon: <FaTrophy />,
+//     title: 'Best Luxury Developer 2024',
+//     sub: 'Times Real Estate Awards',
+//   },
+//   {
+//     icon: <FaStar />,
+//     title: 'CRISIL DA1 Rating',
+//     sub: "India's Highest Developer Grade",
+//   },
+// ];
 
 export default function Showcase() {
   return (
@@ -70,7 +70,7 @@ export default function Showcase() {
               </div> */}
             </div>
 
-            <div className="showcase__awards">
+            {/* <div className="showcase__awards">
               {awards.map((a) => (
                 <div className="showcase__award" key={a.title}>
                   <span className="showcase__award-icon">{a.icon}</span>
@@ -80,7 +80,7 @@ export default function Showcase() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div style={{ marginTop: '36px' }}>
               <Link to="/contact" className="btn-primary">
