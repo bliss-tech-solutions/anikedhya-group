@@ -17,6 +17,37 @@ import {
   HiOutlineGift,
 } from "react-icons/hi";
 
+// ── Partner Logo Card: uses native browser lazy-loading ──
+function PartnerLogo({ partner }) {
+  const [status, setStatus] = useState("idle"); // "idle" | "loaded" | "error"
+
+  if (status === "error") {
+    return (
+      <div className="cp-marquee-item">
+        <div className="cp-marquee-fallback">
+          <span>{partner.name.charAt(0)}</span>
+        </div>
+        <span className="cp-marquee-item__tooltip">{partner.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="cp-marquee-item">
+      <img
+        src={partner.logo}
+        alt={partner.name}
+        loading="lazy"
+        decoding="async"
+        className={status === "loaded" ? "cp-logo-visible" : "cp-logo-loading"}
+        onLoad={() => setStatus("loaded")}
+        onError={() => setStatus("error")}
+      />
+      <span className="cp-marquee-item__tooltip">{partner.name}</span>
+    </div>
+  );
+}
+
 const channelPartners = [
   { name: "32", logo: "/CP Logo/32.png" },
   { name: "Amaron Group", logo: "/CP Logo/Amaron%20Group.png" },
@@ -223,34 +254,6 @@ const faqs = [
   },
 ];
 
-// ── Partner Logo Card with fallback ──
-function PartnerLogo({ partner }) {
-  const [error, setError] = useState(false);
-
-  if (error) {
-    return (
-      <div className="cp-marquee-item">
-        <div className="cp-marquee-fallback">
-          <span>{partner.name.charAt(0)}</span>
-        </div>
-        <span className="cp-marquee-item__tooltip">{partner.name}</span>
-      </div>
-    );
-  }
-
-  return (
-    <div className="cp-marquee-item">
-      <img
-        src={partner.logo}
-        alt={partner.name}
-        loading="lazy"
-        onError={() => setError(true)}
-      />
-      <span className="cp-marquee-item__tooltip">{partner.name}</span>
-    </div>
-  );
-}
-
 export default function ChannelPartner() {
   useReveal();
   const [openFaq, setOpenFaq] = useState(null);
@@ -272,9 +275,6 @@ export default function ChannelPartner() {
     e.preventDefault();
     setSubmitted(true);
   };
-
-  const row1 = channelPartners.slice(0, 37);
-  const row2 = channelPartners.slice(37);
 
   return (
     <>
