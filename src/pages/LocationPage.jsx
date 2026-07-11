@@ -1,7 +1,14 @@
-import { useReveal } from '../components/useReveal';
-import PageHero from '../components/PageHero';
-import { Link } from 'react-router-dom';
-import { FaBuilding, FaHospital, FaPlaneDeparture, FaSchool, FaShoppingBag, FaTrain } from 'react-icons/fa';
+import { useReveal } from "../components/useReveal";
+import PageHero from "../components/PageHero";
+import { Link } from "react-router-dom";
+import {
+  FaBuilding,
+  FaHospital,
+  FaPlaneDeparture,
+  FaSchool,
+  FaShoppingBag,
+  FaTrain,
+} from "react-icons/fa";
 
 const points = [
   {
@@ -59,14 +66,20 @@ export default function LocationPage() {
           <div className="location__grid">
             {/* Points */}
             <div>
-              <div className="reveal" style={{ marginBottom: '32px' }}>
+              <div className="reveal" style={{ marginBottom: "32px" }}>
                 <span className="section-tag">
                   <span className="gold-line" />
                   Proximity Map
                 </span>
-                <h2 className="section-title">Everything is<br /><em>Close By</em></h2>
-                <p className="section-subtitle" style={{ marginBottom: '0' }}>
-                  Anikedhya Emperors sits at the heart of Gota Ahmedabad's fastest-growing premium suburb with seamless access to every destination that matters.
+                <h2 className="section-title">
+                  Everything is
+                  <br />
+                  <em>Close By</em>
+                </h2>
+                <p className="section-subtitle" style={{ marginBottom: "0" }}>
+                  Anikedhya Emperors sits at the heart of Gota Ahmedabad's
+                  fastest-growing premium suburb with seamless access to every
+                  destination that matters.
                 </p>
               </div>
               <div className="location__points reveal">
@@ -87,36 +100,41 @@ export default function LocationPage() {
             <div className="reveal-right">
               <div className="location__map-wrap">
                 <div className="location__map">
-                  <div className="location__map-pin">
-                    <div className="location__map-pin-dot" />
-                    <div className="location__map-pin-label">Anikedhya Emperors</div>
-                  </div>
-                  {[
-                    { top: '18%', left: '30%' }, { top: '30%', left: '72%' },
-                    { top: '65%', left: '28%' }, { top: '78%', left: '65%' },
-                    { top: '22%', left: '58%' }, { top: '70%', left: '45%' },
-                  ].map((pos, i) => (
-                    <div key={i} style={{ position: 'absolute', top: pos.top, left: pos.left, width: '6px', height: '6px', borderRadius: '50%', background: 'rgba(184,146,42,0.5)' }} />
-                  ))}
-                  <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.25 }}>
-                    {[['30%', '18%'], ['72%', '30%'], ['28%', '65%'], ['65%', '78%']].map(([x, y], i) => (
-                      <line key={i} x1={x} y1={y} x2="50%" y2="50%" stroke="#B8922A" strokeWidth="0.5" strokeDasharray="4,4" />
-                    ))}
-                  </svg>
+                  <iframe
+                    title="Anikedhya Emperors Location"
+                    src="https://www.google.com/maps?q=Anikedhya+Emperors,+Gota,+Ahmedabad&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
 
               <div className="location__cta-box">
                 <div>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', color: 'var(--text-head)', marginBottom: '4px' }}>Gota, Ahmedabad</div>
-                  <div style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Gujarat, India</div>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "18px",
+                      color: "var(--text-head)",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    Gota, Ahmedabad
+                  </div>
+                  <div style={{ fontSize: "13px", color: "var(--text-muted)" }}>
+                    Gujarat, India
+                  </div>
                 </div>
                 <a
                   href="https://maps.app.goo.gl/VX7ijeJDzyNkrXTW8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
-                  style={{ padding: '12px 24px', fontSize: '10px' }}
+                  style={{ padding: "12px 24px", fontSize: "10px" }}
                 >
                   <span>Get Directions</span>
                   <span className="arrow">→</span>

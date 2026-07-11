@@ -15,7 +15,7 @@ export const projects = [
     status: 'Ongoing',
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal Corporation/MAA16550/070326/311230',
     brochure: '/2026/05/Anikedhya-Emperors-E-Brouchure.pdf',
-    ctaImage :'/2x1.5in sticker ARTWORK CC_page-0001.jpg',
+    ctaImage: '/2x1.5in sticker ARTWORK CC_page-0001.jpg',
     description:
       'Anikedhya Emperors is a masterpiece of architectural grandeur a G+14 residential tower in the heart of Gota, Ahmedabad. Designed for those who believe their home should mirror the life they have built, it seamlessly blends neo-classical architecture with contemporary luxury.',
     highlights: [
@@ -80,8 +80,8 @@ export const projects = [
       'Vastu-compliant layouts',
     ],
     gallery: [
+      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM.jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (2).jpeg', label: 'Anikedhya Atlantis' },
-      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (3).jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (4).jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (5).jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (6).jpeg', label: 'Anikedhya Atlantis' },
@@ -183,10 +183,10 @@ export const projects = [
     rera: 'PR/GJ/GANDHINAGAR/GANDHINAGAR/Others/MAA07608/291020',
     brochure: '/ANIKEDHYA ALTEZA/ANIKEDHYA ALTEZA.pdf',
     description:
-      'Anikedhya Alteza stands as a testament to refined living in the premium Satellite neighbourhood of Ahmedabad. With spacious 4 BHK homes and curated lifestyle amenities, it delivers an uncompromised luxury experience.',
+      'Anikedhya Alteza stands as a testament to refined living in the premium Vavol neighbourhood of Gandhinagar. With well-planned 2 & 3 BHK residences and shops alongside curated lifestyle amenities, it delivers an uncompromised luxury experience.',
     highlights: [
-      'Spacious 2 & 3 BHK residences with private terraces',
-      'Apartment and shopes',
+      'Spacious 2 & 3 BHK residences',
+      'Apartment and shops',
       'Well-planned apartment layouts',
       'Landscaped courtyard and open spaces',
       'Ample natural light and ventilation',
@@ -202,7 +202,6 @@ export const projects = [
       { icon: "FaSchool", name: "Top Schools & Hospitals Nearby" },
       { icon: "FaBuilding", name: "Efficient 2 & 3 BHK Apartments & Shops" },
       "24×7 Water Supply",
-      "24x7 Security"
     ],
   },
 

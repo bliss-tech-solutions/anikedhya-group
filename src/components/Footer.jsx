@@ -18,11 +18,31 @@ const quickLinks = [
 ];
 
 const properties = [
-  { label: "Anikedhya Emperors", href: "/projects/anikedhya-emperors" },
+  // Ongoing
+  {
+    label: "Anikedhya Emperors",
+    href: "/projects/anikedhya-emperors",
+  },
+
+  // Anikedhya Completed
   { label: "Anikedhya Atlantis", href: "/projects/anikedhya-atlantis" },
   { label: "Anikedhya Capitol", href: "/projects/anikedhya-capitol" },
   { label: "Anikedhya Capitol 2", href: "/projects/anikedhya-capitol-2" },
-  { label: "ANIKEDHYA ALTEZA", href: "/projects/anikedhya-alteza" },
+  { label: "Anikedhya Alteza", href: "/projects/anikedhya-alteza" },
+
+  // Siddharth
+  { label: "Siddharth Icon", href: "/projects/siddharth-icon" },
+  { label: "Siddharth Residency", href: "/projects/siddharth-residency" },
+  { label: "Sidharth Bungalows", href: "/projects/siddharth-bunglows" },
+  { label: "Siddharth Status", href: "/projects/siddharth-status" },
+  { label: "Siddharth Homes", href: "/projects/siddharth-homes" },
+  { label: "Siddharth Square", href: "/projects/siddharth-square" },
+
+  // Others
+  { label: "Devasya Homes", href: "/projects/devasya-homes" },
+  { label: "Shree Mangaldeep", href: "/projects/shree-mangaldeep-apartments" },
+  { label: "Sneh Greens", href: "/projects/sneh-greens" },
+  { label: "Sneh Residency", href: "/projects/sneh-residency" },
 ];
 
 const contactInfo = [
@@ -37,21 +57,9 @@ const socials = [
     href: "https://www.instagram.com/anikedhyagroup/",
     label: "Instagram",
   },
-  {
-    icon: <FaLinkedinIn />,
-    href: "#",
-    label: "LinkedIn",
-  },
-  {
-    icon: <FaFacebookF />,
-    href: "#",
-    label: "Facebook",
-  },
-  {
-    icon: <FaYoutube />,
-    href: "#",
-    label: "YouTube",
-  },
+  { icon: <FaLinkedinIn />, href: "#", label: "LinkedIn" },
+  { icon: <FaFacebookF />, href: "#", label: "Facebook" },
+  { icon: <FaYoutube />, href: "#", label: "YouTube" },
 ];
 
 export default function Footer() {
@@ -59,22 +67,17 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__top">
-          <div>
+          {/* Brand Column */}
+          <div className="footer__col footer__col--brand">
             <div className="footer__brand-name">
-              {" "}
-              <Link
-                to="/"
-                className="navbar__logo"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link to="/" className="navbar__logo footer__logo-link">
                 <img
                   src="/logo.png"
                   alt="Anikedhya Group"
-                  className="navbar__logo-img"
+                  className="footer__logo-img"
                 />
               </Link>
             </div>
-
             <p className="footer__brand-desc">
               Crafting extraordinary living spaces since 2008. Anikdhya Group
               stands as a symbol of luxury, trust, and architectural brilliance
@@ -94,7 +97,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          {/* Quick Links */}
+          <div className="footer__col">
             <div className="footer__col-title">Quick Links</div>
             <ul className="footer__links">
               {quickLinks.map((l) => (
@@ -105,54 +109,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* Properties - Two Column Grid */}
+          <div className="footer__col footer__col--properties">
             <div className="footer__col-title">Properties</div>
-            <ul className="footer__links">
+            <ul className="footer__links footer__links--grid">
               {properties.map((p) => (
                 <li key={p.label}>
-                  <Link to={p.href}>{p.label}</Link>
+                  <Link to={p.href}>
+                    <span className="footer__link-label">{p.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
+          {/* Contact */}
+          <div className="footer__col">
             <div className="footer__col-title">Contact</div>
-            <ul className="footer__links" style={{ gap: "10px" }}>
+            <ul className="footer__contact-list">
               {contactInfo.map((c) => (
-                <li
-                  key={c.label}
-                  style={{ color: "rgba(255,255,255,0.45)", fontSize: "14px" }}
-                >
+                <li key={c.label} className="footer__contact-item">
                   {c.label}
                 </li>
               ))}
             </ul>
-            <div
-              style={{
-                marginTop: "24px",
-                paddingTop: "24px",
-                borderTop: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "11px",
-                  letterSpacing: "3px",
-                  textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.35)",
-                  marginBottom: "8px",
-                }}
-              >
-                RERA Registered
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "14px",
-                  color: "var(--gold)",
-                }}
-              >
+            <div className="footer__rera">
+              <div className="footer__rera-label">RERA Registered</div>
+              <div className="footer__rera-number">
                 PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal
                 Corporation/MAA16550/070326/311230
               </div>
