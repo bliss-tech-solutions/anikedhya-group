@@ -291,7 +291,7 @@ export default function ChannelPartner() {
         <div className="container">
           <div className="cp-stats-inner">
             <div className="cp-stat reveal">
-              <div className="cp-stat__num">500+</div>
+              <div className="cp-stat__num">70+</div>
               <div className="cp-stat__label">Active Partners</div>
             </div>
             <div className="cp-stat reveal delay-2">
@@ -586,7 +586,7 @@ export default function ChannelPartner() {
               Our Network
             </div>
             <h2 className="section-title">
-              Trusted by <em>500+ Partners</em>
+              Trusted by <em>70+ Partners</em>
             </h2>
             <p className="section-subtitle">
               Leading real estate brokers and agencies across Gujarat proudly
