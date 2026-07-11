@@ -53,10 +53,6 @@ const channelPartners = [
   { name: "Amaron Group", logo: "/CP Logo/Amaron%20Group.png" },
   { name: "Amit Prajapati", logo: "/CP Logo/Amit%20Prajapati.png" },
   { name: "Anand Sharma", logo: "/CP Logo/Anand%20Sharma.png" },
-  {
-    name: "Anikedhya Emperors Logo",
-    logo: "/CP Logo/Anikedhya%20Emperors%20Logo.png",
-  },
   { name: "Anjaniya", logo: "/CP Logo/Anjaniya.png" },
   { name: "Ankit Sudani", logo: "/CP Logo/Ankit%20Sudani.png" },
   { name: "Ankit", logo: "/CP Logo/Ankit.png" },
@@ -95,7 +91,6 @@ const channelPartners = [
   { name: "Max Space Realty", logo: "/CP Logo/Max%20Space%20Realty.png" },
   { name: "Midtown Property", logo: "/CP Logo/Midtown%20Property.png" },
   { name: "Mihir Thakkar", logo: "/CP Logo/Mihir%20Thakkar.png" },
-  { name: "Naar 2", logo: "/CP Logo/Naar%202.png" },
   { name: "Naar", logo: "/CP Logo/Naar.png" },
   { name: "Nine One Realty", logo: "/CP Logo/Nine%20One%20Realty.png" },
   { name: "Nishit", logo: "/CP Logo/Nishit.png" },
@@ -135,7 +130,6 @@ const channelPartners = [
   { name: "Shrut Thakkar", logo: "/CP Logo/Shrut%20Thakkar.png" },
   { name: "Sp Space Piyush", logo: "/CP Logo/Sp%20Space%20Piyush.png" },
   { name: "The Realty Atlas", logo: "/CP Logo/The%20Realty%20Atlas.png" },
-  { name: "Unicorn Marketing", logo: "/CP Logo/Unicorn%20Marketing.png" },
   { name: "USA Tushar Patel", logo: "/CP Logo/USA%20Tushar%20PAtel.png" },
   { name: "Utkal Patel", logo: "/CP Logo/Utkal%20Patel.png" },
   {
