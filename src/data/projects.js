@@ -75,7 +75,7 @@ export const projects = [
     description:
       'Anikedhya Atlantis offers contemporary 2 & 3 BHK appartment & shops.',
     highlights: [
-      "Efficiant 2 & 3 BHK Floor plans and Retail shopes",
+      "Efficiant 2 & 3 BHK Floor plans and Retail shops",
       'Proximity to top schools and hospitals',
       'Vastu-compliant layouts',
     ],

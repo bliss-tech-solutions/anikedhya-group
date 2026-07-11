@@ -127,12 +127,13 @@ export default function ProjectDetailPage() {
                   {gallery.length > 1 && (
                     <div className="pd-gallery__thumbs">
                       {gallery.map((g, i) => (
+                        // Thumbnail buttons
                         <button
                           key={g.src}
                           className={`pd-gallery__thumb${i === activeImg ? ' active' : ''}`}
                           onClick={() => setActiveImg(i)}
                           aria-label={g.label}
-                          style={{ backgroundImage: `url(${g.src})` }}
+                          style={{ backgroundImage: `url("${encodeURI(g.src)}")` }}
                         />
                       ))}
                     </div>
