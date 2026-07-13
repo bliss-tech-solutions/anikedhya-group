@@ -12,7 +12,7 @@ const info = [
   {
     icon: <FaPhone />,
     label: "Sales Hotline",
-    value: "+91 85118 58835\n+91 85118 58876",
+    value: "+91 8511 858 835\n+91 8511 858 876",
   },
   {
     icon: <FaEnvelope />,
@@ -162,9 +162,11 @@ export default function ContactPage() {
                       required
                     >
                       <option value="">Select a property type</option>
-                      <option value="two-bhk-apartment">2 BHK Apartment</option>
-                      <option value="penthouse">3 & 4 BHK Penthouse</option>
+                      <option value="two-bhk-apartment">2 BHK</option>
+                      <option value="three-bhk-apartment">3 BHK</option>
+                      <option value="four-bhk-apartment">4 BHK</option>
                       <option value="commercial">Commercial Space</option>
+                      <option value="office">Office Space</option>
                     </select>
                   </div>
                   <div className="form-group">

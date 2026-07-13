@@ -47,8 +47,8 @@ const properties = [
 
 const contactInfo = [
   { label: "Gota, Ahmedabad, Gujarat - 382481" },
-  { label: "+91 85118 58835" },
-  { label: "+91 85118 58876" },
+  { label: "+91 8511 858 835" },
+  { label: "+91 8511 858 876" },
   { label: "anikedhyamarketing@gmail.com" },
 ];
 
@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="footer__brand-name">
               <Link to="/" className="footer__logo-link">
                 <img
-                  src="/logo.png"
+                  src="/dark_logo.jpeg"
                   alt="Anikedhya Group"
                   className="footer__logo-img"
                 />

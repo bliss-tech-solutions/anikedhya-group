@@ -28,6 +28,13 @@ import {
   FaFireExtinguisher,
   FaUtensils,
   FaBath,
+  FaHome,
+  FaWater,
+  FaBook,
+  FaPhoneAlt,
+  FaCar,
+  FaRunning,
+  FaSpa,
 } from "react-icons/fa";
 
 import { FaCompassDrafting } from "react-icons/fa6";
@@ -54,6 +61,13 @@ export const iconMap = {
   FaWalking,
   MdElevator,
   MdOutlineChildCare,
+  FaHome,
+  FaWater,
+  FaBook,
+  FaPhoneAlt,
+  FaCar,
+  FaRunning,
+  FaSpa,
 
   // ── Emperors amenity icons ───────────────────────────
   FaBasketballBall, // Multipurpose Court
