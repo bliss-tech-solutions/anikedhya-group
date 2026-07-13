@@ -430,7 +430,7 @@ export const projects = [
     tagline: '2 & 3 BHK Elite Living',
     location: 'Amraiwadi, Ahmedabad',
     bg: 'pc-bg-3',
-     heroImg: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
+    heroImg: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
@@ -460,10 +460,8 @@ export const projects = [
     ],
 
     amenities: [
-      {
-        icon: "FaParking",
-        name: "Ground Floor Parking"
-      },
+      { icon: "FaTint", name: "24×7 Water Supply" },
+
       {
         icon: "FaElevator",
         name: "2 Automatic Lifts"
