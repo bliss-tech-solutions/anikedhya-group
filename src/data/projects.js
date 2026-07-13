@@ -433,7 +433,7 @@ export const projects = [
     heroImg: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
     status: 'Completed',
     legacy: true,
-    rera: 'N/A',
+    rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA09372/261121',
     brochure: "/mangaldip/Brochure.pdf",
     // noDetail: true,
     description:
