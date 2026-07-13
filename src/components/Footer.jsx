@@ -60,7 +60,11 @@ const socials = [
     label: "Instagram",
   },
   { icon: <FaLinkedinIn />, href: "#", label: "LinkedIn" },
-  { icon: <FaFacebookF />, href: "#", label: "Facebook" },
+  {
+    icon: <FaFacebookF />,
+    href: "https://www.facebook.com/anikedhyagroupofficial",
+    label: "Facebook",
+  },
   { icon: <FaYoutube />, href: "#", label: "YouTube" },
 ];
 
