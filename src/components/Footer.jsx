@@ -43,6 +43,7 @@ const properties = [
   { label: "Shree Mangaldeep", href: "/projects/shree-mangaldeep-apartments" },
   { label: "Sneh Greens", href: "/projects/sneh-greens" },
   { label: "Sneh Residency", href: "/projects/sneh-residency" },
+  { label: "Mangal Deep", href: "/projects/mangaldeep-apartment" },
 ];
 
 const contactInfo = [
