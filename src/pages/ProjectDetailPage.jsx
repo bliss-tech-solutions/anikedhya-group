@@ -155,7 +155,7 @@ export default function ProjectDetailPage() {
 
                   {brochure ? (
                     <a
-                      href={encodeURI(brochure)}
+                      href={encodeURI(decodeURIComponent(brochure))}
                       download
                       target="_blank"
                       rel="noopener noreferrer"

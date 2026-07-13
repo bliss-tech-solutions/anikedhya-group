@@ -247,11 +247,11 @@ export const projects = [
     tagline: '2 & 3 BHK Lavish Living',
     location: 'Vavol, Gandhinagar',
     bg: 'pc-bg-2',
-    heroImg: '/Sidharth%20Residancy/WhatsApp%20Image%202026-07-07%20at%202.25.19%20PM.jpeg',
+    heroImg: '/Sidharth Residancy/WhatsApp Image 2026-07-07 at 2.25.19 PM.jpeg',
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Sidharth%20Residancy/Sidharth%20Residancy.pdf',
+    brochure: '/Sidharth Residancy/Sidharth Residancy.pdf',
     description:
       'Siddharth Residency represents our commitment to creating quality homes that deliver lasting value. A serene residential enclave offering modern amenities in a peaceful setting.',
     highlights: [
@@ -261,8 +261,8 @@ export const projects = [
       'Convenient location with easy access',
     ],
     gallery: [
-      { src: '/Sidharth%20Residancy/WhatsApp%20Image%202026-07-07%20at%202.25.19%20PM.jpeg', label: 'Siddharth Residency' },
-      { src: '/Sidharth%20Residancy/WhatsApp%20Image%202026-07-07%20at%202.25.51%20PM.jpeg', label: 'Siddharth Residency' },
+      { src: '/Sidharth Residancy/WhatsApp Image 2026-07-07 at 2.25.19 PM.jpeg', label: 'Siddharth Residency' },
+      { src: '/Sidharth Residancy/WhatsApp Image 2026-07-07 at 2.25.51 PM.jpeg', label: 'Siddharth Residency' },
     ],
     amenities: [
       { icon: "FaLeaf", name: "Gardens" },
@@ -280,7 +280,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Sidharth%20Bungalows/Sidharth%20Bungalows.pdf',
+    brochure: '/Sidharth Bungalows/Sidharth Bungalows.pdf',
     description:
       'Sidharth Bungalows offers the exclusivity of independent bungalow living within a well-planned community. Designed for families who value privacy, space and refined architectural sensibility.',
     highlights: [
@@ -343,7 +343,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Siddharth%20Homes/Siddharth%20Homes%20Brochure.pdf',
+    brochure: '/Siddharth Homes/Siddharth Homes Brochure.pdf',
     description:
       'Siddharth Homes reflects our belief that a home is more than just walls it is where memories are built. Thoughtfully designed residences delivering comfort, quality and community.',
     highlights: [
@@ -353,8 +353,8 @@ export const projects = [
       'Well-planned circulation and open areas',
     ],
     gallery: [
-      { src: '/Siddharth%20Homes/WhatsApp%20Image%202026-07-07%20at%202.36.58%20PM.jpeg', label: 'Building View' },
-      { src: '/Siddharth%20Homes/WhatsApp%20Image%202026-07-07%20at%202.38.30%20PM.jpeg', label: 'Building View 2' },
+      { src: '/Siddharth Homes/WhatsApp Image 2026-07-07 at 2.36.58 PM.jpeg', label: 'Building View' },
+      { src: '/Siddharth Homes/WhatsApp Image 2026-07-07 at 2.38.30 PM.jpeg', label: 'Building View 2' },
     ],
     amenities: [
       { icon: "FaLeaf", name: "Gardens" },
