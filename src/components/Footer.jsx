@@ -58,13 +58,13 @@ const socials = [
     href: "https://www.instagram.com/anikedhyagroup/",
     label: "Instagram",
   },
-  { icon: <FaLinkedinIn />, href: "#", label: "LinkedIn" },
+  // { icon: <FaLinkedinIn />, href: "#", label: "LinkedIn" },
   {
     icon: <FaFacebookF />,
     href: "https://www.facebook.com/anikedhyagroupofficial",
     label: "Facebook",
   },
-  { icon: <FaYoutube />, href: "#", label: "YouTube" },
+  // { icon: <FaYoutube />, href: "#", label: "YouTube" },
 ];
 
 export default function Footer() {
