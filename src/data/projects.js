@@ -430,11 +430,11 @@ export const projects = [
     tagline: '2 & 3 BHK Elite Living',
     location: 'Amraiwadi, Ahmedabad',
     bg: 'pc-bg-3',
-    heroImg: '/logo.png',
+     heroImg: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '',
+    brochure: "/mangaldip/Brochure.pdf",
     noDetail: true,
     description:
       'Shree Mangaldeep Apartments is one of our foundational projects a beautifully crafted residential development that reflects our early commitment to quality construction and community-focused design.',
@@ -445,13 +445,62 @@ export const projects = [
       'Quality construction and finishes',
     ],
     gallery: [
-      { src: '/2026/04/shree-mangaldeep-apartments.jpg', label: 'Building View' },
+      {
+        src: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
+        label: "Front Elevation"
+      },
+      {
+        src: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM.jpeg",
+        label: "Aerial View"
+      },
+      {
+        src: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.10 PM.jpeg",
+        label: "Ground Floor Plan"
+      },
     ],
+
     amenities: [
-      { icon: "FaShieldAlt", name: "24×7 Security" },
-      { icon: "FaParking", name: "Parking" },
-      { icon: "FaBolt", name: "Power Backup" },
-    ],
+      {
+        icon: "FaParking",
+        name: "Ground Floor Parking"
+      },
+      {
+        icon: "FaElevator",
+        name: "2 Automatic Lifts"
+      },
+      {
+        icon: "FaDoorOpen",
+        name: "Decorative Entrance Foyer"
+      },
+      {
+        icon: "FaWater",
+        name: "Underground Water Tank"
+      },
+      {
+        icon: "FaWater",
+        name: "Overhead Water Tank"
+      },
+      {
+        icon: "FaFireExtinguisher",
+        name: "Fire Safety System"
+      },
+      {
+        icon: "FaBolt",
+        name: "Concealed Electrical Wiring"
+      },
+      {
+        icon: "FaUtensils",
+        name: "Granite Kitchen Platform"
+      },
+      {
+        icon: "FaBorderAll",
+        name: "Vitrified Tile Flooring"
+      },
+      {
+        icon: "FaBath",
+        name: "Premium Sanitary Fittings"
+      }
+    ]
   },
   {
     slug: 'sneh-greens',
@@ -516,101 +565,6 @@ export const projects = [
       { icon: "MdOutlineChildCare", name: "Kids Play Area" },
     ],
   },
-  {
-  slug: "mangaldeep-apartment",
 
-  name: "Mangaldeep Apartment",
-
-  tagline: "1 & 2 BHK Premium Living",
-
-  location: "Near Narayanpura, Ahmedabad",
-
-  bg: "pc-bg-1",
-
-  heroImg: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
-
-  status: "Completed",
-
-  rera: "N/A",
-  legacy: true,
-
-  brochure: "/mangaldip/Brochure.pdf",
-
-  // ctaImage: "/2026/xx/mangaldeep-cta.jpg",
-
-  description:
-    "Mangaldeep Apartment is a premium residential project offering thoughtfully designed 1 & 2 BHK apartments. The project focuses on quality construction, functional layouts, ample parking, modern specifications, and excellent connectivity, making it an ideal choice for comfortable urban living.",
-
-  highlights: [
-    "1 & 2 BHK Premium Apartments",
-    "Ground Floor Dedicated Parking",
-    "Two Automatic Elevators",
-    "Decorative Entrance Foyer",
-    "Underground & Overhead Water Tank",
-    "Fire Safety System",
-    "Modern Electrical Fittings",
-    "Granite Kitchen Platform",
-    "Vitrified Tile Flooring",
-    "Premium Bathroom Fittings"
-  ],
-
-  gallery: [
-    {
-      src: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
-      label: "Front Elevation"
-    },
-    {
-      src: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM.jpeg",
-      label: "Aerial View"
-    },
-    {
-      src: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.10 PM.jpeg",
-      label: "Ground Floor Plan"
-    },
-  ],
-
-  amenities: [
-    {
-      icon: "FaParking",
-      name: "Ground Floor Parking"
-    },
-    {
-      icon: "FaElevator",
-      name: "2 Automatic Lifts"
-    },
-    {
-      icon: "FaDoorOpen",
-      name: "Decorative Entrance Foyer"
-    },
-    {
-      icon: "FaWater",
-      name: "Underground Water Tank"
-    },
-    {
-      icon: "FaWater",
-      name: "Overhead Water Tank"
-    },
-    {
-      icon: "FaFireExtinguisher",
-      name: "Fire Safety System"
-    },
-    {
-      icon: "FaBolt",
-      name: "Concealed Electrical Wiring"
-    },
-    {
-      icon: "FaUtensils",
-      name: "Granite Kitchen Platform"
-    },
-    {
-      icon: "FaBorderAll",
-      name: "Vitrified Tile Flooring"
-    },
-    {
-      icon: "FaBath",
-      name: "Premium Sanitary Fittings"
-    }
-  ]
-}
 
 ];

@@ -33,7 +33,7 @@ const properties = [
   // Siddharth
   { label: "Siddharth Icon", href: "/projects/siddharth-icon" },
   { label: "Siddharth Residency", href: "/projects/siddharth-residency" },
-  { label: "Sidharth Bungalows", href: "/projects/siddharth-bunglows" },
+  { label: "Siddharth Bungalows", href: "/projects/siddharth-bunglows" },
   { label: "Siddharth Status", href: "/projects/siddharth-status" },
   { label: "Siddharth Homes", href: "/projects/siddharth-homes" },
   { label: "Siddharth Square", href: "/projects/siddharth-square" },
