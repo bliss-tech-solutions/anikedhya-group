@@ -272,7 +272,7 @@ export const projects = [
   },
   {
     slug: 'siddharth-bunglows',
-    name: 'Sidharth Bungalows',
+    name: 'Siddharth Bungalows',
     tagline: '3 BHK Bungalows',
     location: 'Vavol, Gandhinagar',
     bg: 'pc-bg-3',
