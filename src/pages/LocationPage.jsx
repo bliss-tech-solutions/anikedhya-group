@@ -45,7 +45,7 @@ const points = [
     icon: <FaBuilding />,
     name: "SG Highway Business Hubs",
     detail: "Proximity to Ahmedabad's corporate and commercial corridors.",
-    distance: "15 Min",
+    distance: "5 Min",
   },
 ];
 
