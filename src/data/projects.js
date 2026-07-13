@@ -71,7 +71,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: ' PR / GJ / AHMEDABAD / AHMEDABAD CITY / AUDA / MAA08232 / A1M / 060821',
-    brochure: '/Anikedhya Atlantis/Anikedhya Atlantis final_02.pdf',
+    brochure: '/Anikedhya Atlantis/Anikedhya_Atlantis.pdf',
     description:
       'Anikedhya Atlantis offers contemporary 2 & 3 BHK appartment & shops.',
     highlights: [
@@ -138,7 +138,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: "PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA07680/121120",
-    brochure: "/capitol_2/Capitol-2 paldi-1 (2).pdf",
+    brochure: "/capitol_2/Capitol-2.pdf",
     description:
       "Anikedhya Capitol 2 is a premium commercial and corporate office development located at the prestigious Mahalaxmi 5 Rasta in Paldi, Ahmedabad. Designed as a modern G+7 freehold commercial tower with an elegant glass façade, it offers state-of-the-art office spaces, premium retail showrooms, seamless connectivity, and world-class infrastructure for ambitious businesses.",
     highlights: [
@@ -181,7 +181,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'PR/GJ/GANDHINAGAR/GANDHINAGAR/Others/MAA07608/291020',
-    brochure: '/ANIKEDHYA ALTEZA/ANIKEDHYA ALTEZA.pdf',
+    brochure: '/ANIKEDHYA ALTEZA/ANIKEDHYA_ALTEZA.pdf',
     description:
       'Anikedhya Alteza stands as a testament to refined living in the premium Vavol neighbourhood of Gandhinagar. With well-planned 2 & 3 BHK residences and shops alongside curated lifestyle amenities, it delivers an uncompromised luxury experience.',
     highlights: [
@@ -219,7 +219,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA01615/150218',
-    brochure: '/Siddharth Icon/Siddharth Icon Brochure.pdf',
+    brochure: '/Siddharth Icon/Siddharth_Icon.pdf',
     description:
       'Siddharth Icon stands as a proud landmark in our journey of delivering thoughtfully designed residences. A perfect blend of comfort, functionality and community living for modern families.',
     highlights: [
@@ -251,7 +251,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Sidharth Residancy/Sidharth Residancy.pdf',
+    brochure: '/Sidharth Residancy/Sidharth_Residancy.pdf',
     description:
       'Siddharth Residency represents our commitment to creating quality homes that deliver lasting value. A serene residential enclave offering modern amenities in a peaceful setting.',
     highlights: [
@@ -280,7 +280,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Sidharth Bungalows/Sidharth Bungalows.pdf',
+    brochure: '/Sidharth Bungalows/Sidharth_Bungalows.pdf',
     description:
       'Sidharth Bungalows offers the exclusivity of independent bungalow living within a well-planned community. Designed for families who value privacy, space and refined architectural sensibility.',
     highlights: [
@@ -310,7 +310,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Sidharth status/Sidharth status.pdf',
+    brochure: '/Sidharth status/Sidharth_status.pdf',
     description:
       'Siddharth Status is a distinguished residential development that redefines aspirational living. Designed with premium finishes and modern amenities to elevate everyday life.',
     highlights: [
@@ -343,7 +343,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'N/A',
-    brochure: '/Siddharth Homes/Siddharth Homes Brochure.pdf',
+    brochure: '/Siddharth Homes/Siddharth_Homes.pdf',
     description:
       'Siddharth Homes reflects our belief that a home is more than just walls it is where memories are built. Thoughtfully designed residences delivering comfort, quality and community.',
     highlights: [
@@ -434,7 +434,7 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/RAA09372/261121',
-    brochure: "/mangaldip/Brochure.pdf",
+    brochure: "/mangaldip/MangalDeep.pdf",
     // noDetail: true,
     description:
       'Shree Mangaldeep Apartments is one of our foundational projects a beautifully crafted residential development that reflects our early commitment to quality construction and community-focused design.',
@@ -563,6 +563,4 @@ export const projects = [
       { icon: "MdOutlineChildCare", name: "Kids Play Area" },
     ],
   },
-
-
 ];
