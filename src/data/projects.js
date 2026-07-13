@@ -435,7 +435,7 @@ export const projects = [
     legacy: true,
     rera: 'N/A',
     brochure: "/mangaldip/Brochure.pdf",
-    noDetail: true,
+    // noDetail: true,
     description:
       'Shree Mangaldeep Apartments is one of our foundational projects a beautifully crafted residential development that reflects our early commitment to quality construction and community-focused design.',
     highlights: [
