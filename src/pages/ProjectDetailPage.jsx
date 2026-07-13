@@ -155,8 +155,10 @@ export default function ProjectDetailPage() {
 
                   {brochure ? (
                     <a
-                      href={brochure}
+                      href={encodeURI(brochure)}
                       download
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="pd-brochure-btn"
                       aria-label="Download Brochure"
                     >
@@ -180,10 +182,10 @@ export default function ProjectDetailPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* ── Back to projects ── */}
-      <section className="pd-footer-strip">
+      <section className="pd-footer-strip" >
         <div className="container">
           <Link to="/projects" className="btn-outline">
             ← Back to All Projects

@@ -2,7 +2,7 @@
 import { useReveal } from '../components/useReveal';
 import PageHero from '../components/PageHero';
 import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { projects } from '../data/projects'
 import { FaMapMarkerAlt, FaHome } from 'react-icons/fa';
 
 const statusColor = {
