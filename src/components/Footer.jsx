@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="footer__brand-name">
               <Link to="/" className="footer__logo-link">
                 <img
-                  src="/dark_logo.jpeg"
+                  src="/Anikedhya_Golden_Logo.png"
                   alt="Anikedhya Group"
                   className="footer__logo-img"
                 />
