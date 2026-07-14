@@ -91,25 +91,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid rgba(184, 146, 42, 0.2); */
   border-radius: 4px;
   width: 100px;
-  height: 100px;
+  height: auto; /* changed from 100px to auto */
 }
 
 .footer__logo-img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain; /* changed from cover to contain */
   padding-bottom: 20px;
 }
 
 @media (max-width: 480px) {
   .footer__logo-img {
-    height: 38px;
+    height: auto; /* changed from 38px to auto */
+    width: 80px; /* control size via width instead */
   }
   .footer__logo-link {
     padding: 8px 12px;
+    width: auto; /* let it size naturally */
   }
 }
 

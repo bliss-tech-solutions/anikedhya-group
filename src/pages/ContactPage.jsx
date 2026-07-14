@@ -12,7 +12,7 @@ const info = [
   {
     icon: <FaPhone />,
     label: "Sales Hotline",
-    value: "+91 8511 858 835\n+91 8511 858 876",
+    value: "+91 85 11 85 88 35\n+91 85 11 85 88 76",
   },
   {
     icon: <FaEnvelope />,
