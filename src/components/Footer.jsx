@@ -138,13 +138,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <div className="footer__rera">
-              <div className="footer__rera-label">RERA Registered</div>
-              <div className="footer__rera-number">
-                PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal
-                Corporation/MAA16550/070326/311230
-              </div>
-            </div>
+           
           </div>
         </div>
 
