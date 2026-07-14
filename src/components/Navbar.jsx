@@ -17,7 +17,7 @@ const links = [
       { label: "Channel Partner", href: "/channel-partner" },
     ],
   },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact US", href: "/contact" },
 ];
 
 export default function Navbar() {

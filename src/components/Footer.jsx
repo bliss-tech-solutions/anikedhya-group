@@ -3,6 +3,9 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -46,10 +49,10 @@ const properties = [
 ];
 
 const contactInfo = [
-  { label: "Gota, Ahmedabad, Gujarat - 382481" },
-  { label: "+91 85 11 85 88 35" },
-  { label: "+91 85 11 85 88 76" },
-  { label: "anikedhyamarketing@gmail.com" },
+  { icon: <FaMapMarkerAlt />, label: "Gota, Ahmedabad, Gujarat - 382481" },
+  { icon: <FaPhoneAlt />, label: "+91 85 11 85 88 35" },
+  { icon: <FaPhoneAlt />, label: "+91 85 11 85 88 76" },
+  { icon: <FaEnvelope />, label: "anikedhyamarketing@gmail.com" },
 ];
 
 const socials = [
@@ -130,21 +133,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="footer__col">
-            <div className="footer__col-title">Contact</div>
+            <div className="footer__col-title">Contact US</div>
             <ul className="footer__contact-list">
               {contactInfo.map((c) => (
                 <li key={c.label} className="footer__contact-item">
-                  {c.label}
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}
+                  >
+                    <span>{c.icon}</span>
+                    <span>{c.label}</span>
+                  </span>
                 </li>
               ))}
             </ul>
-            <div className="footer__rera">
-              <div className="footer__rera-label">RERA Registered</div>
-              <div className="footer__rera-number">
-                PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal
-                Corporation/MAA16550/070326/311230
-              </div>
-            </div>
           </div>
         </div>
 
