@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         <div className="container">
           <div className="section-header-center reveal">
             <div className="section-tag"><span className="gold-line" />Current Portfolio</div>
-            <h2 className="section-title">Ongoing & <em>Completed</em> Projects</h2>
+            <h2 className="section-title"><em>Ongoing</em> Projects</h2>
             <p className="section-subtitle">
               Explore our signature developments each crafted with precision, purpose and premium finishes.
             </p>
