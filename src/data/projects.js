@@ -123,7 +123,6 @@ export const projects = [
       { icon: "FaFireExtinguisher", name: "Fire Protection System" },
       { icon: "FaTint", name: "24×7 Water Supply" },
       { icon: "FaToilet", name: "Common Toilet Facility" },
-      { icon: "FaBuilding", name: "Premium Glass Façade" },
       { icon: "FaArchway", name: "Contemporary Elevation" },
       { icon: "FaStore", name: "Retail Showrooms" },
       { icon: "FaDoorOpen", name: "Letter Box Provision" },

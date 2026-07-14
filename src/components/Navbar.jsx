@@ -1,23 +1,23 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect, useRef } from "react";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 
 // Top-level nav structure — items with `children` become dropdowns
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Projects', href: '/projects' },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Projects", href: "/projects" },
   {
-    label: 'Explore',
+    label: "Explore",
     children: [
-      { label: 'Gallery', href: '/gallery' },
-      { label: 'Amenities', href: '/amenities' },
-      { label: 'Location', href: '/location' },
-      { label: 'Events', href: '/event' },
-      { label: 'Career', href: '/career' },
-      { label: 'Channel Partner', href: '/channel-partner' },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Amenities", href: "/amenities" },
+      { label: "Location", href: "/location" },
+      { label: "Events", href: "/event" },
+      { label: "Career", href: "/career" },
+      { label: "Channel Partner", href: "/channel-partner" },
     ],
   },
-  { label: 'Contact', href: '/contact' },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -31,8 +31,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // Close mobile menu automatically on route change
@@ -44,8 +44,10 @@ export default function Navbar() {
 
   // Lock body scroll when mobile menu open
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   // Close desktop dropdown on outside click
@@ -55,8 +57,8 @@ export default function Navbar() {
         setOpenDropdown(null);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Check if any child of a dropdown is active (for parent highlight)
@@ -65,7 +67,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar${scrolled ? ' scrolled' : ''}${menuOpen ? ' menu-open' : ''}`}>
+      <nav
+        className={`navbar${scrolled ? " scrolled" : ""}${menuOpen ? " menu-open" : ""}`}
+      >
         <div className="container">
           <div className="navbar__inner">
             <Link
@@ -74,7 +78,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
             >
               <img
-                src="/logo.png"
+                src={`${scrolled ? "/logo.png" : "/Anikedhya_Golden_Logo.png"}`}
                 alt="Anikedhya Group"
                 className="navbar__logo-img"
               />
@@ -89,22 +93,20 @@ export default function Navbar() {
                   return (
                     <li
                       key={l.label}
-                      className={`has-dropdown${isOpen ? ' open' : ''}`}
+                      className={`has-dropdown${isOpen ? " open" : ""}`}
                       onMouseEnter={() => setOpenDropdown(l.label)}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
                       <button
                         type="button"
-                        className={`dropdown-trigger${activeParent ? ' nav-active' : ''}`}
-                        onClick={() =>
-                          setOpenDropdown(isOpen ? null : l.label)
-                        }
+                        className={`dropdown-trigger${activeParent ? " nav-active" : ""}`}
+                        onClick={() => setOpenDropdown(isOpen ? null : l.label)}
                         aria-expanded={isOpen}
                         aria-haspopup="true"
                       >
                         {l.label}
                         <svg
-                          className={`dropdown-caret${isOpen ? ' rotated' : ''}`}
+                          className={`dropdown-caret${isOpen ? " rotated" : ""}`}
                           width="10"
                           height="10"
                           viewBox="0 0 10 10"
@@ -127,7 +129,7 @@ export default function Navbar() {
                             <NavLink
                               to={c.href}
                               className={({ isActive }) =>
-                                isActive ? 'nav-active' : ''
+                                isActive ? "nav-active" : ""
                               }
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -145,8 +147,10 @@ export default function Navbar() {
                   <li key={l.href}>
                     <NavLink
                       to={l.href}
-                      end={l.href === '/'}
-                      className={({ isActive }) => (isActive ? 'nav-active' : '')}
+                      end={l.href === "/"}
+                      className={({ isActive }) =>
+                        isActive ? "nav-active" : ""
+                      }
                     >
                       {l.label}
                     </NavLink>
@@ -157,12 +161,14 @@ export default function Navbar() {
 
             <button
               type="button"
-              className={`navbar__hamburger${menuOpen ? ' open' : ''}`}
+              className={`navbar__hamburger${menuOpen ? " open" : ""}`}
               onClick={() => setMenuOpen((prev) => !prev)}
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
             >
-              <span /><span /><span />
+              <span />
+              <span />
+              <span />
             </button>
           </div>
         </div>
@@ -170,11 +176,11 @@ export default function Navbar() {
 
       {/* Backdrop overlay behind the menu — closes on tap */}
       <div
-        className={`mobile-menu__backdrop${menuOpen ? ' open' : ''}`}
+        className={`mobile-menu__backdrop${menuOpen ? " open" : ""}`}
         onClick={() => setMenuOpen(false)}
       />
 
-      <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
+      <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
         <button
           type="button"
           className="mobile-menu__close"
@@ -192,7 +198,7 @@ export default function Navbar() {
               return (
                 <div
                   key={l.label}
-                  className={`mobile-dropdown${isOpen ? ' open' : ''}`}
+                  className={`mobile-dropdown${isOpen ? " open" : ""}`}
                 >
                   <button
                     type="button"
@@ -204,7 +210,7 @@ export default function Navbar() {
                   >
                     {l.label}
                     <svg
-                      className={`dropdown-caret${isOpen ? ' rotated' : ''}`}
+                      className={`dropdown-caret${isOpen ? " rotated" : ""}`}
                       width="12"
                       height="12"
                       viewBox="0 0 10 10"
@@ -228,7 +234,7 @@ export default function Navbar() {
                         to={c.href}
                         onClick={() => setMenuOpen(false)}
                         className={({ isActive }) =>
-                          isActive ? 'nav-active' : ''
+                          isActive ? "nav-active" : ""
                         }
                       >
                         {c.label}
@@ -244,9 +250,9 @@ export default function Navbar() {
               <NavLink
                 key={l.href}
                 to={l.href}
-                end={l.href === '/'}
+                end={l.href === "/"}
                 onClick={() => setMenuOpen(false)}
-                className={({ isActive }) => (isActive ? 'nav-active' : '')}
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
                 {l.label}
               </NavLink>
