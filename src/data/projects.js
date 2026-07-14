@@ -67,7 +67,7 @@ export const projects = [
     tagline: '2 & 3 BHK Luxurious Flats & Shop',
     location: 'Chandkheda, Ahmedabad',
     bg: 'pc-bg-3',
-    heroImg: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.34 PM.jpeg',
+    heroImg: '/Anikedhya Atlantis/Atlantis.jpeg',
     status: 'Completed',
     legacy: true,
     rera: ' PR / GJ / AHMEDABAD / AHMEDABAD CITY / AUDA / MAA08232 / A1M / 060821',
