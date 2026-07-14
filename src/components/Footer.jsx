@@ -84,7 +84,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="footer__brand-desc">
-              Crafting extraordinary living spaces since 2008. Anikdhya Group
+              Crafting extraordinary living spaces since 2008. Anikedhya Group
               stands as a symbol of luxury, trust, and architectural brilliance
               across India's most prestigious addresses.
             </p>
@@ -150,8 +150,8 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copy">
-            © {new Date().getFullYear()} <span>Anikdhya Group</span>. All rights
-            reserved.
+            © {new Date().getFullYear()} <span>Anikedhya Group</span>. All
+            rights reserved.
           </p>
           <p className="footer__copy">
             <a
