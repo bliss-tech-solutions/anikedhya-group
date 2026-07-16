@@ -44,6 +44,7 @@
   color: var(--text-head);
   line-height: 1.5;
   word-break: break-word;
+  font-variant-numeric: lining-nums; /* fixes the uneven old-style digits */
 }
 
 /* Form */
