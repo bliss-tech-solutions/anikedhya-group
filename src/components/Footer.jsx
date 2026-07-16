@@ -98,6 +98,7 @@ export default function Footer() {
                   href={s.href}
                   className="footer__social-link"
                   aria-label={s.label}
+                  target="_black"
                 >
                   {s.icon}
                 </a>
