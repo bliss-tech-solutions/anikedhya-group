@@ -261,13 +261,45 @@ export default function ChannelPartner() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    const data = new FormData();
+    data.append("access_key", "d1201d88-e430-48d0-9ed0-a890a36ebdfb");
+    data.append("name", formData.name);
+    data.append("company", formData.company);
+    data.append("phone", formData.phone);
+    data.append("email", formData.email);
+    data.append("city", formData.city);
+    data.append("experience", formData.experience);
+    data.append("message", formData.message);
+    data.append("subject", "New Channel Partner Registration - Anikedhya Group");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -556,12 +588,16 @@ export default function ChannelPartner() {
                       onChange={handleChange}
                     />
                   </div>
+                  {error && (
+                    <p style={{ color: "red", marginBottom: 12 }}>{error}</p>
+                  )}
                   <button
                     type="submit"
                     className="btn-primary"
                     style={{ width: "100%", justifyContent: "center" }}
+                    disabled={submitting}
                   >
-                    <span>Submit Registration</span>
+                    <span>{submitting ? "Submitting..." : "Submit Registration"}</span>
                     <span className="arrow">→</span>
                   </button>
                 </form>

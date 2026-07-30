@@ -130,6 +130,8 @@ export default function Career() {
   const [expandedId, setExpandedId]     = useState(null);
   const [selectedRole, setSelectedRole] = useState('');
   const [submitted, setSubmitted]       = useState(false);
+  const [submitting, setSubmitting]     = useState(false);
+  const [error, setError]               = useState('');
   useReveal();
 
   const filtered = activeDept === 'All'
@@ -144,9 +146,33 @@ export default function Career() {
     }, 100);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError('');
+    setSubmitting(true);
+
+    try {
+      const formData = new FormData(e.target);
+      formData.append('access_key', 'd1201d88-e430-48d0-9ed0-a890a36ebdfb');
+      formData.append('subject', 'New Career Application - Anikedhya');
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        e.target.reset();
+      } else {
+        setError('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -338,26 +364,27 @@ export default function Career() {
                   <div className="form-row">
                     <div className="form-group">
                       <label>First Name *</label>
-                      <input type="text" placeholder="Your first name" required />
+                      <input type="text" name="firstName" placeholder="Your first name" required />
                     </div>
                     <div className="form-group">
                       <label>Last Name *</label>
-                      <input type="text" placeholder="Your last name" required />
+                      <input type="text" name="lastName" placeholder="Your last name" required />
                     </div>
                   </div>
                   <div className="form-row">
                     <div className="form-group">
                       <label>Email *</label>
-                      <input type="email" placeholder="your@email.com" required />
+                      <input type="email" name="email" placeholder="your@email.com" required />
                     </div>
                     <div className="form-group">
                       <label>Phone *</label>
-                      <input type="tel" placeholder="+91 XXXXX XXXXX" required />
+                      <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
                     </div>
                   </div>
                   <div className="form-group">
                     <label>Position Applying For *</label>
                     <select
+                      name="position"
                       required
                       value={selectedRole}
                       onChange={(e) => setSelectedRole(e.target.value)}
@@ -372,7 +399,7 @@ export default function Career() {
                   <div className="form-row">
                     <div className="form-group">
                       <label>Total Experience *</label>
-                      <select required>
+                      <select name="experience" required>
                         <option value="">Select experience</option>
                         <option>0–1 Years</option>
                         <option>1–3 Years</option>
@@ -384,13 +411,14 @@ export default function Career() {
                     </div>
                     <div className="form-group">
                       <label>Current Location *</label>
-                      <input type="text" placeholder="City, State" required />
+                      <input type="text" name="location" placeholder="City, State" required />
                     </div>
                   </div>
                   <div className="form-group">
                     <label>Resume / CV *</label>
                     <input
                       type="file"
+                      name="resume"
                       accept=".pdf,.doc,.docx"
                       className="career-file-input"
                       required
@@ -399,12 +427,18 @@ export default function Career() {
                   <div className="form-group">
                     <label>Cover Note (Optional)</label>
                     <textarea
+                      name="coverNote"
                       placeholder="Tell us why you'd be a great fit for this role..."
                       rows={4}
                     />
                   </div>
-                  <button type="submit" className="btn-primary">
-                    <span>Submit Application</span>
+                  {error && (
+                    <p style={{ color: '#e04b4b', fontSize: '13px' }}>
+                      {error}
+                    </p>
+                  )}
+                  <button type="submit" className="btn-primary" disabled={submitting}>
+                    <span>{submitting ? 'Submitting...' : 'Submit Application'}</span>
                     <span className="arrow">→</span>
                   </button>
                 </form>

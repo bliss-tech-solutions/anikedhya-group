@@ -31,13 +31,44 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    setError("");
+    setSubmitting(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("access_key", "d1201d88-e430-48d0-9ed0-a890a36ebdfb");
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("phone", form.phone);
+      formData.append("interest", form.interest);
+      formData.append("message", form.message);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", phone: "", interest: "", message: "" });
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -179,12 +210,18 @@ export default function ContactPage() {
                       onChange={handleChange}
                     />
                   </div>
+                  {error && (
+                    <p style={{ color: "#e04b4b", fontSize: "13px" }}>
+                      {error}
+                    </p>
+                  )}
                   <button
                     type="submit"
                     className="btn-primary"
+                    disabled={submitting}
                     style={{ alignSelf: "flex-start", border: "none" }}
                   >
-                    <span>Send Enquiry</span>
+                    <span>{submitting ? "Sending..." : "Send Enquiry"}</span>
                     <span className="arrow">→</span>
                   </button>
                   <p
