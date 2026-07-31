@@ -85,7 +85,7 @@ export const projects = [
       { src: '/Anikedhya Atlantis/Fv_Backside View.jpg.jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/Atlantis.jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/Fv_Front View.jpg.jpeg', label: 'Anikedhya Atlantis' },
-      { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (4).jpeg', label: 'Anikedhya Atlantis' },
+      // { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (4).jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (5).jpeg', label: 'Anikedhya Atlantis' },
       { src: '/Anikedhya Atlantis/WhatsApp Image 2026-07-08 at 3.51.33 PM (6).jpeg', label: 'Anikedhya Atlantis' },
     ],
@@ -116,8 +116,8 @@ export const projects = [
       "Anikedhya Capitol is a landmark commercial development strategically located at Tapovan Circle, Ahmedabad. Designed to meet the needs of modern businesses, it offers premium office spaces and retail showrooms with contemporary architecture, excellent connectivity, and world-class infrastructure for enterprises and investors.",
     gallery: [
       { src: '/capitol/brochure_final_13AWK_1_compressed_page-0004.jpg', label: 'Anikedhya Capitol' },
-      { src: '/capitol/brochure_final_13AWK_1_compressed_page-0005.jpg', label: 'Anikedhya Capitol' },
-      { src: '/capitol/brochure_final_13AWK_1_compressed_page-0007.jpg', label: 'Anikedhya Capitol' },
+      // { src: '/capitol/brochure_final_13AWK_1_compressed_page-0005.jpg', label: 'Anikedhya Capitol' },
+      // { src: '/capitol/brochure_final_13AWK_1_compressed_page-0007.jpg', label: 'Anikedhya Capitol' },
     ],
     amenities: [
       { icon: "FaWalking", name: "Easy Connectivity" },
