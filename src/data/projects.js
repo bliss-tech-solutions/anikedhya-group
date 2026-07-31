@@ -49,7 +49,7 @@ export const projects = [
       { icon: "FaTree", name: "Party Lawn & Paver Lawn" },
       { icon: "FaUserFriends", name: "Senior Citizen Sit-Outs" },
       { icon: "FaShieldAlt", name: "Security Cabin" },
-      { icon: "FaFire", name: "Pantry & Barbecue Station" },
+      { icon: "FaFire", name: "Pantry & BBQ Station" },
       { icon: "FaWalking", name: "Articulated Walkway" },
       { icon: "FaStore", name: "Society Store" },
       { icon: "FaDoorOpen", name: "Entrance Gate" },
@@ -64,14 +64,15 @@ export const projects = [
   {
     slug: 'anikedhya-atlantis',
     name: 'Anikedhya Atlantis',
-    tagline: '2 & 3 BHK Luxurious Flats & Shop',
+    tagline: '2 & 3 BHK Luxurious Flats & Shops',
     location: 'Chandkheda, Ahmedabad',
     bg: 'pc-bg-3',
     heroImg: '/Anikedhya Atlantis/Atlantis.jpeg',
     status: 'Completed',
     legacy: true,
     rera: ' PR / GJ / AHMEDABAD / AHMEDABAD CITY / AUDA / MAA08232 / A1M / 060821',
-    brochure: '/Anikedhya Atlantis/Anikedhya_Atlantis.pdf',
+    // brochure: '/Anikedhya Atlantis/Anikedhya_Atlantis.pdf',
+    brochure:"",
     description:
       'Anikedhya Atlantis offers contemporary 2 & 3 BHK appartment & shops.',
     highlights: [
@@ -109,7 +110,8 @@ export const projects = [
     status: 'Completed',
     legacy: true,
     rera: 'PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/CAA02041/EX1/A1C/041120',
-    brochure: '/capitol/capitol.pdf',
+    // brochure: '/capitol/capitol.pdf',
+    brochure:"",
     description:
       "Anikedhya Capitol is a landmark commercial development strategically located at Tapovan Circle, Ahmedabad. Designed to meet the needs of modern businesses, it offers premium office spaces and retail showrooms with contemporary architecture, excellent connectivity, and world-class infrastructure for enterprises and investors.",
     gallery: [
