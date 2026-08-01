@@ -19,7 +19,7 @@ const events = [
     id: 'udaipur-2025',
     title: 'Anikedhya Udaipur',
     subtitle: 'Channel Partner Appreciation Trip',
-    date: 'June 2026',
+    date: 'April 2026',
     location: 'Udaipur, Rajasthan',
     description:
       'A grand appreciation trip to the City of Lakes celebrating our top-performing channel partners with an unforgettable Udaipur experience. Two days of luxury, bonding, and memories that last a lifetime.',
@@ -81,7 +81,7 @@ function Lightbox({ photos, startIndex, onClose }) {
 /* ─────────────────────────────────────────
    PHOTO GALLERY with LOAD MORE
 ───────────────────────────────────────── */
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 24;
 
 function EventGallery({ photos }) {
   const [visible, setVisible] = useState(PAGE_SIZE);

@@ -129,6 +129,7 @@ export default function Career() {
   const [activeDept, setActiveDept]     = useState('All');
   const [expandedId, setExpandedId]     = useState(null);
   const [selectedRole, setSelectedRole] = useState('');
+  const [customRole, setCustomRole]     = useState('');
   const [submitted, setSubmitted]       = useState(false);
   const [submitting, setSubmitting]     = useState(false);
   const [error, setError]               = useState('');
@@ -140,6 +141,7 @@ export default function Career() {
 
   const handleApply = (title) => {
     setSelectedRole(title);
+    setCustomRole('');
     setSubmitted(false);
     setTimeout(() => {
       document.getElementById('career-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -153,6 +155,13 @@ export default function Career() {
 
     try {
       const formData = new FormData(e.target);
+
+      // If the applicant chose "Other", replace the position value with their custom role
+      if (selectedRole === 'Other') {
+        const customRoleValue = formData.get('customRole')?.trim();
+        formData.set('position', customRoleValue || 'Other');
+      }
+
       formData.append('access_key', 'd1201d88-e430-48d0-9ed0-a890a36ebdfb');
       formData.append('subject', 'New Career Application - Anikedhya');
 
@@ -165,6 +174,7 @@ export default function Career() {
       if (data.success) {
         setSubmitted(true);
         e.target.reset();
+        setCustomRole('');
       } else {
         setError('Something went wrong. Please try again.');
       }
@@ -387,15 +397,34 @@ export default function Career() {
                       name="position"
                       required
                       value={selectedRole}
-                      onChange={(e) => setSelectedRole(e.target.value)}
+                      onChange={(e) => {
+                        setSelectedRole(e.target.value);
+                        if (e.target.value !== 'Other') setCustomRole('');
+                      }}
                     >
                       <option value="">Select a role</option>
                       {openings.map((o) => (
                         <option key={o.id} value={o.title}>{o.title}</option>
                       ))}
                       <option value="General Application">General Application</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
+
+                  {selectedRole === 'Other' && (
+                    <div className="form-group">
+                      <label>Please Specify Role *</label>
+                      <input
+                        type="text"
+                        name="customRole"
+                        placeholder="Enter the role you're applying for"
+                        value={customRole}
+                        onChange={(e) => setCustomRole(e.target.value)}
+                        required
+                      />
+                    </div>
+                  )}
+
                   <div className="form-row">
                     <div className="form-group">
                       <label>Total Experience *</label>

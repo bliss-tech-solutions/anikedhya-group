@@ -22,19 +22,19 @@ import { FaShieldAlt } from 'react-icons/fa';
 const featuredAmenities = [
   {
     icon: <FaDumbbell />,
-    name: 'State-of-the-Art Gym',
+    name: 'Gym',
     desc: 'Premium fitness equipment, boxing, cardio & strength training zones.',
     img: '/anikedhya-gym.jpg',
   },
   {
     icon: <FaTableTennisPaddleBall />,
-    name: 'Table Tennis Lounge',
+    name: 'Indior Games',
     desc: 'Dedicated indoor sports lounge with professional-grade equipment.',
     img: '/anikedhya-table-tennis.jpg',
   },
   {
     icon: <FaFilm />,
-    name: 'Open-Air Home Theatre',
+    name: 'Open-Air Project Wall',
     desc: 'Lush garden amphitheatre with outdoor cinema experience under the stars.',
     img: '/anikedhya-outdoor-theater.jpg',
   },
