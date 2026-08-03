@@ -142,7 +142,7 @@ export default function ProjectsPage() {
                     </div>
                     <div className="proj-card__actions">
                       <span className="proj-card__link">
-                        {p.noDetail ? 'Details Coming Soon' : 'View Details'}{' '}
+                        {p.noDetail ? 'Details Delivered successfully' : 'View Details'}{' '}
                         {!p.noDetail && <span>→</span>}
                       </span>
                       <span className="proj-card__legacy-tag">
