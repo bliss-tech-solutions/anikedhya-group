@@ -457,7 +457,7 @@ export const projects = [
   {
     slug: 'shree-mangaldeep-apartments',
     name: 'Shree Mangaldeep Apartments',
-    tagline: '2 & 3 BHK Elite Living',
+    tagline: '1 & 2 BHK Elite Living',
     location: 'Amraiwadi, Ahmedabad',
     bg: 'pc-bg-3',
     heroImg: "/mangaldip/WhatsApp Image 2026-07-12 at 6.56.09 PM (1).jpeg",
@@ -492,14 +492,14 @@ export const projects = [
     amenities: [
       { icon: "FaTint", name: "24×7 Water Supply" },
 
-      {
-        icon: "FaElevator",
-        name: "2 Automatic Lifts"
-      },
-      {
-        icon: "FaDoorOpen",
-        name: "Decorative Entrance Foyer"
-      },
+      // {
+      //   icon: "FaElevator",
+      //   name: "2 Automatic Lifts"
+      // },
+      // {
+      //   icon: "FaDoorOpen",
+      //   name: "Decorative Entrance Foyer"
+      // },
       {
         icon: "FaWater",
         name: "Underground Water Tank"
@@ -524,10 +524,10 @@ export const projects = [
         icon: "FaBorderAll",
         name: "Vitrified Tile Flooring"
       },
-      {
-        icon: "FaBath",
-        name: "Premium Sanitary Fittings"
-      }
+      // {
+      //   icon: "FaBath",
+      //   name: "Premium Sanitary Fittings"
+      // }
     ]
   },
   {

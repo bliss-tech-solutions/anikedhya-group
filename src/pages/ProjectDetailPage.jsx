@@ -22,6 +22,7 @@ export default function ProjectDetailPage() {
   const [activeImg, setActiveImg] = useState(0);
   const [heroError, setHeroError] = useState(false);
   const [thumbErrors, setThumbErrors] = useState({});
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   if (!project) return <Navigate to="/projects" replace />;
 
@@ -55,6 +56,11 @@ export default function ProjectDetailPage() {
   // Filter gallery to only show images that haven't errored
   // We still keep them in the array but show fallback UI
   const hasValidGallery = gallery.length > 0;
+
+  const showPrevImg = () =>
+    setActiveImg((prev) => (prev - 1 + gallery.length) % gallery.length);
+  const showNextImg = () =>
+    setActiveImg((prev) => (prev + 1) % gallery.length);
 
   return (
     <>
@@ -179,7 +185,15 @@ export default function ProjectDetailPage() {
               {hasValidGallery && (
                 <div className="pd-gallery reveal-right">
                   {/* Main image */}
-                  <div className="pd-gallery__main">
+                  <div
+                    className="pd-gallery__main"
+                    onClick={() => {
+                      if (!thumbErrors[activeImg]) setLightboxOpen(true);
+                    }}
+                    style={{
+                      cursor: thumbErrors[activeImg] ? "default" : "zoom-in",
+                    }}
+                  >
                     {thumbErrors[activeImg] ? (
                       <div className="pd-gallery__placeholder">
                         <span className="pd-gallery__placeholder-icon">🏢</span>
@@ -203,7 +217,10 @@ export default function ProjectDetailPage() {
                         <button
                           key={`${g.src}-${i}`}
                           className={`pd-gallery__thumb${i === activeImg ? " active" : ""}${thumbErrors[i] ? " pd-gallery__thumb--error" : ""}`}
-                          onClick={() => setActiveImg(i)}
+                          onClick={() => {
+                            setActiveImg(i);
+                            if (!thumbErrors[i]) setLightboxOpen(true);
+                          }}
                           aria-label={g.label || `Image ${i + 1}`}
                           style={
                             thumbErrors[i]
@@ -300,6 +317,137 @@ export default function ProjectDetailPage() {
           </Link>
         </div>
       </section>
+
+      {/* ── Gallery Lightbox ── */}
+      {lightboxOpen && hasValidGallery && (
+        <div
+          className="pd-lightbox"
+          onClick={() => setLightboxOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.9)",
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <button
+            className="pd-lightbox__close"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxOpen(false);
+            }}
+            aria-label="Close preview"
+            style={{
+              position: "absolute",
+              top: 24,
+              right: 24,
+              background: "rgba(255,255,255,0.1)",
+              border: "none",
+              color: "#fff",
+              width: 44,
+              height: 44,
+              borderRadius: "50%",
+              fontSize: 22,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            ✕
+          </button>
+
+          {gallery.length > 1 && (
+            <button
+              className="pd-lightbox__prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                showPrevImg();
+              }}
+              aria-label="Previous image"
+              style={{
+                position: "absolute",
+                left: 24,
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(255,255,255,0.1)",
+                border: "none",
+                color: "#fff",
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                fontSize: 24,
+                cursor: "pointer",
+              }}
+            >
+              ‹
+            </button>
+          )}
+
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "90vw",
+              maxHeight: "85vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <img
+              src={gallery[activeImg]?.src}
+              alt={gallery[activeImg]?.label || name}
+              style={{
+                maxWidth: "90vw",
+                maxHeight: "78vh",
+                objectFit: "contain",
+                borderRadius: 4,
+              }}
+            />
+            {gallery[activeImg]?.label && (
+              <span style={{ color: "#fff", fontSize: 14, opacity: 0.8 }}>
+                {gallery[activeImg].label}
+              </span>
+            )}
+            {gallery.length > 1 && (
+              <span style={{ color: "#fff", fontSize: 13, opacity: 0.6 }}>
+                {activeImg + 1} / {gallery.length}
+              </span>
+            )}
+          </div>
+
+          {gallery.length > 1 && (
+            <button
+              className="pd-lightbox__next"
+              onClick={(e) => {
+                e.stopPropagation();
+                showNextImg();
+              }}
+              aria-label="Next image"
+              style={{
+                position: "absolute",
+                right: 24,
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(255,255,255,0.1)",
+                border: "none",
+                color: "#fff",
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                fontSize: 24,
+                cursor: "pointer",
+              }}
+            >
+              ›
+            </button>
+          )}
+        </div>
+      )}
     </>
   );
 }
