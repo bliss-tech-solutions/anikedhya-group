@@ -617,7 +617,7 @@ export default function ChannelPartner() {
               Our Network
             </div>
             <h2 className="section-title">
-              Trusted by <em>70+ Partners</em>
+              Trusted by <em>70+ Channel Partners</em>
             </h2>
             <p className="section-subtitle">
               Leading real estate brokers and agencies across Gujarat proudly
