@@ -23,73 +23,61 @@ const featuredAmenities = [
   {
     icon: <FaDumbbell />,
     name: 'Gym',
-    desc: 'Premium fitness equipment, boxing, cardio & strength training zones.',
     img: '/anikedhya-gym.jpg',
   },
   {
     icon: <FaTableTennisPaddleBall />,
     name: 'Indior Games',
-    desc: 'Dedicated indoor sports lounge with professional-grade equipment.',
     img: '/anikedhya-table-tennis.jpg',
   },
   {
     icon: <FaFilm />,
     name: 'Open-Air Project Wall',
-    desc: 'Lush garden amphitheatre with outdoor cinema experience under the stars.',
     img: '/anikedhya-outdoor-theater.jpg',
   },
   {
     icon: <FaLeaf />,
     name: 'Landscaped Gardens',
-    desc: 'Manicured green spaces and serene walking pathways for daily tranquillity.',
     img: '/anikedhya-garden.jpg',
   },
   {
     icon: <FaChess />,
     name: 'Rooftop Chess Court',
-    desc: 'Sky-high recreation with a premium chess setup and panoramic views.',
     img: '/anikedhya-rooftop-chess.jpg',
   },
   {
     icon: <FaUmbrellaBeach />,
     name: 'Rooftop Gazebo',
-    desc: 'An elegant sky retreat to unwind and soak in Ahmedabad skyline.',
     img: '/anikedhya-rooftop-gazebo.jpg',
   },
   {
     icon: <FaBuilding />,
     name: 'Grand Lobby & Entrance',
-    desc: 'A statement entrance with premium marble, designer lighting & security.',
     img: '/anikedhya-entrance.jpg',
   },
   {
     icon: <FaElevator />,
     name: 'High-Speed Elevators',
-    desc: 'Multiple high-speed lifts for smooth and swift vertical movement.',
     img: null,
   },
   {
     icon: <FaShieldAlt />,
     name: '24×7 Security',
-    desc: 'CCTV surveillance, intercom system, and trained security personnel.',
     img: null,
   },
   {
     icon: <FaBolt />,
     name: 'Power Backup',
-    desc: 'Uninterrupted 100% power backup for all common areas and residences.',
     img: null,
   },
   {
     icon: <FaCloudRain />,
     name: 'Rainwater Harvesting',
-    desc: 'Sustainable water management with integrated harvesting infrastructure.',
     img: null,
   },
   {
     icon: <FaWheelchair />,
     name: 'Barrier-Free Access',
-    desc: 'Thoughtfully designed ramps and access points for all residents.',
     img: null,
   },
 ];

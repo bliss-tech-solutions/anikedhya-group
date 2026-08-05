@@ -9,7 +9,7 @@ import { FaCalendar, FaMap } from 'react-icons/fa';
 const BASE = '/Events/';
 
 // 30 photos — all .jpg
-const udaipurPhotos = Array.from({ length: 29 }, (_, i) => ({
+const udaipurPhotos = Array.from({ length: 24 }, (_, i) => ({
   src: `${BASE}event_image_${i + 1}.jpeg`,
   alt: `Anikedhya Udaipur Trip Photo ${i + 1}`,
 }));
