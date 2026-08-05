@@ -457,8 +457,8 @@ export default function ChannelPartner() {
                   </div>
                   <div>
                     <div className="cp-contact-label">Call Us</div>
-                    <div className="cp-contact-value">+91 85118 58835</div><br />
-                    <div className="cp-contact-value">+91 85118 58876</div>
+                    <div className="contact__info-value">+91 85118 58835</div>
+                    <div className="contact__info-value">+91 85118 58876</div>
                   </div>
                 </div>
                 <div className="cp-contact-item">
